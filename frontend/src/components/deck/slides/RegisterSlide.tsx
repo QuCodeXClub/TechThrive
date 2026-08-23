@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Panel, SlideShell } from "../SlideShell";
 import { isPlaceholder, REGISTRATION_URL } from "@/data/event";
 import unstop from "@/assets/unstop-logo.svg";
@@ -141,7 +141,7 @@ export function RegisterSlide() {
               aria-label="CodeX Club LinkedIn"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background/60 text-muted-foreground transition hover:border-primary hover:text-primary"
             >
-              <Linkedin size={17} />
+              <span className="text-sm font-bold">in</span>
             </a>
 
             {/* Instagram */}
@@ -152,7 +152,7 @@ export function RegisterSlide() {
               aria-label="CodeX Club Instagram"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background/60 text-muted-foreground transition hover:border-primary hover:text-primary"
             >
-              <Instagram size={18} />
+              <span className="text-sm font-bold">ig</span>
             </a>
 
             {/* GitHub */}
@@ -163,7 +163,7 @@ export function RegisterSlide() {
               aria-label="CodeX Club GitHub"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background/60 text-muted-foreground transition hover:border-primary hover:text-primary"
             >
-              <Github size={18} />
+              <span className="text-sm font-bold">GH</span>
             </a>
           </div>
         </div>
