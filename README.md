@@ -78,8 +78,8 @@ The frontend application is contained inside the `frontend/` directory.
 ### Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/QuCodeXClub/TechThrive.git
+cd TechThrive
 ```
 
 ### Install Frontend Dependencies
