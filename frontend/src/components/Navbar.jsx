@@ -297,7 +297,8 @@ function Navbar() {
 							</button>
 
 							<motion.a
-								href="REGISTRATION_URL_TO_BE_ADDED"
+								target="_blank"
+								href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
 								whileHover={
 									shouldReduceMotion
 										? {}
@@ -427,7 +428,8 @@ function Navbar() {
 										})}
 
 										<motion.a
-											href="REGISTRATION_URL_TO_BE_ADDED"
+											target="_blank"
+											href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
 											onClick={closeMobileMenu}
 											initial={
 												shouldReduceMotion ? false : { opacity: 0, y: 8 }

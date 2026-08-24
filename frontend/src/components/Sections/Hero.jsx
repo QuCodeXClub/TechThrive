@@ -187,7 +187,8 @@ function Hero() {
 							className="mt-8 flex flex-col gap-3 sm:flex-row"
 						>
 							<motion.a
-								href="REGISTRATION_URL_TO_BE_ADDED"
+								target="_blank"
+								href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
 								whileHover={shouldReduceMotion ? {} : { y: -2 }}
 								whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
 								className="group bg-primary-500 hover:bg-primary-600 inline-flex min-h-12 items-center justify-center gap-3 rounded-lg px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(34,197,94,0.15)] transition-colors"

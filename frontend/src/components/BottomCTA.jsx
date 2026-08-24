@@ -133,7 +133,8 @@ function CTA() {
 								</div>
 
 								<a
-									href="REGISTRATION_URL_TO_BE_ADDED"
+									target="_blank"
+									href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
 									className="group bg-background text-foreground flex min-h-14 w-full items-center justify-between px-5 text-sm font-semibold transition-transform duration-300 hover:-translate-y-1"
 								>
 									<span>Register your team</span>
