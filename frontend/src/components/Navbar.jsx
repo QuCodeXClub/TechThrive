@@ -198,11 +198,11 @@ function Navbar() {
 							<div className="bg-border hidden h-8 w-px sm:block" />
 
 							<div className="block min-w-0 leading-none">
-								<p className="font-display text-foreground text-sm font-bold tracking-tight">
+								<p className="font-display text-foreground text-lg font-bold tracking-tight">
 									TechThrive
 								</p>
 
-								<p className="text-muted mt-1 flex items-center gap-1.5 font-mono text-[8px] tracking-[0.18em] uppercase">
+								<p className="text-muted flex items-center gap-1.5 font-mono text-[8px] font-bold tracking-[0.18em] uppercase">
 									<span className="relative flex size-1.5">
 										<span className="bg-primary-500 absolute inset-0 animate-ping rounded-full opacity-60" />
 										<span className="bg-primary-500 relative size-1.5 rounded-full" />

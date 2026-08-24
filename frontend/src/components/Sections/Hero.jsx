@@ -66,7 +66,7 @@ function Hero() {
 
 							<div className="bg-border h-5 w-px" />
 
-							<div className="border-border bg-surface-raised text-foreground/60 flex h-10 items-center rounded-md border px-1 text-sm">
+							<div className="border-border bg-surface-raised text-muted flex h-10 items-center rounded-md border px-1 text-sm">
 								Powered by
 								<img
 									src={UnstopLogo}
@@ -130,7 +130,7 @@ function Hero() {
 						<img
 							src={SIHComplete}
 							alt="Smart India Hackathon 2026"
-							className="z-20 my-4 h-16 w-auto rounded-xl"
+							className="z-20 my-4 h-12 w-auto rounded-xl sm:h-16"
 						/>
 
 						<motion.div
