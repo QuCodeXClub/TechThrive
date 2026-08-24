@@ -1,1 +1,0 @@
-# TechThrive Frontend
