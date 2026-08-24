@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, CalendarDays, ChevronRight, MapPin } from "lucide-react";
 
 import CodeXLogo from "@/assets/codex-logo.svg";
-import HeroImage from "@/assets/hero-image.jpeg";
+import HeroImage from "@/assets/hero-image.jpg";
 import SIHLogo from "@/assets/sih-logo.jpeg";
 import SIHComplete from "@/assets/sih.jpeg";
 import QuantumLogo from "@/assets/university-logo.webp";

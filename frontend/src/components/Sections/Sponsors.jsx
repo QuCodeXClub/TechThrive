@@ -1,7 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Handshake } from "lucide-react";
 
-import CodeCraftersLogo from "@/assets/sponsors/codecrafters-logo.svg";
+import CodeCraftersDarkLogo from "@/assets/sponsors/codecrafters-logo-dark.svg";
+import CodeCraftersLightLogo from "@/assets/sponsors/codecrafters-logo-light.svg";
 
 const sponsors = [
 	{
@@ -9,7 +10,8 @@ const sponsors = [
 		name: "CodeCrafters",
 		description:
 			"CodeCrafters creates hands-on programming challenges that help developers understand how real-world software works by building systems from scratch.",
-		logo: CodeCraftersLogo,
+		lightLogo: CodeCraftersLightLogo,
+		darkLogo: CodeCraftersDarkLogo,
 		website: "https://codecrafters.io",
 	},
 ];
@@ -125,11 +127,25 @@ function Sponsors() {
 							</div>
 
 							<div className="border-border flex items-center justify-center p-8 sm:p-10 lg:border-r">
-								<img
-									src={sponsor.logo}
-									alt={`${sponsor.name} logo`}
-									className="h-auto w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-100 group-hover:grayscale-0"
-								/>
+								<div className="relative flex items-center justify-center">
+									{/* Light theme */}
+									<div className="dark:hidden">
+										<img
+											src={sponsor.darkLogo}
+											alt={`${sponsor.name} logo`}
+											className="mx-auto block h-auto w-[70%] max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-100 group-hover:grayscale-0"
+										/>
+									</div>
+
+									{/* Dark theme */}
+									<div className="hidden dark:block">
+										<img
+											src={sponsor.lightLogo}
+											alt={`${sponsor.name} logo`}
+											className="mx-auto block h-auto w-[70%] max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-100 group-hover:grayscale-0"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
