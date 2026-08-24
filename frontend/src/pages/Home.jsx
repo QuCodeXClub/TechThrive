@@ -5,7 +5,8 @@ import Hero from "@/components/Sections/Hero";
 import Journey from "@/components/Sections/Journey";
 import PreviousWinners from "@/components/Sections/PreviousWinners";
 import Prizes from "@/components/Sections/Prizes";
-import Problems from "@/components/Sections/Problems";
+import Sponsors from "@/components/Sections/Sponsers";
+import Themes from "@/components/Sections/Themes";
 
 function Home() {
 	return (
@@ -27,7 +28,8 @@ function Home() {
 				<Hero />
 				<About />
 				<Journey />
-				<Problems />
+				<Themes />
+				<Sponsors />
 				<PreviousWinners />
 				<Prizes />
 				<FAQ />

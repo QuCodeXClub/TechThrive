@@ -8,7 +8,8 @@ import logo from "@/assets/techthrive-logo.svg";
 const navigation = [
 	{ label: "About", href: "#about" },
 	{ label: "Journey", href: "#journey" },
-	{ label: "Problems", href: "#problems" },
+	{ label: "Themes", href: "#themes" },
+	{ label: "Sponsors", href: "#sponsors" },
 	{ label: "Previous Winners", href: "#previous-winners" },
 	{ label: "Prizes", href: "#prizes" },
 	{ label: "FAQ", href: "#faq" },
