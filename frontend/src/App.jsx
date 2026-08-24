@@ -1,9 +1,30 @@
-const App = () => (
-	<div className="flex min-h-screen items-center justify-center bg-sky-950">
-		<h1 className="text-4xl font-bold text-white">
-			<span className="text-sky-400">Tech</span>Thrive
-		</h1>
-	</div>
-);
+import { createBrowserRouter, RouterProvider } from "react-router";
+
+import RootLayout from "@/layouts/RootLayout";
+import ErrorHandlingPage from "@/pages/ErrorHandlingPage";
+import Home from "@/pages/Home";
+import NotFoundPage from "@/pages/NotFoundPage";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <RootLayout />,
+		errorElement: <ErrorHandlingPage />,
+		children: [
+			{
+				index: true,
+				element: <Home />,
+			},
+		],
+	},
+	{
+		path: "*",
+		element: <NotFoundPage />,
+	},
+]);
+
+function App() {
+	return <RouterProvider router={router} />;
+}
 
 export default App;
