@@ -5,7 +5,7 @@ import Hero from "@/components/Sections/Hero";
 import Journey from "@/components/Sections/Journey";
 import PreviousWinners from "@/components/Sections/PreviousWinners";
 import Prizes from "@/components/Sections/Prizes";
-import Sponsors from "@/components/Sections/Sponsers";
+import Sponsors from "@/components/Sections/Sponsors";
 import Themes from "@/components/Sections/Themes";
 
 function Home() {
