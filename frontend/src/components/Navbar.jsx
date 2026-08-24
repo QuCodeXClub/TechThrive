@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 import logo from "@/assets/techthrive-logo.svg";
+import { getTheme, setTheme } from "@/utils/storage";
 
 const navigation = [
 	{ label: "About", href: "#about" },
@@ -15,24 +16,37 @@ const navigation = [
 	{ label: "FAQ", href: "#faq" },
 ];
 
+const REGISTER_URL = "https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052";
+
 function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
-	const [darkMode, setDarkMode] = useState(() =>
-		document.documentElement.classList.contains("dark"),
-	);
+
+	const [darkMode, setDarkMode] = useState(() => {
+		const savedTheme = getTheme();
+
+		if (savedTheme) {
+			return savedTheme === "dark";
+		}
+
+		return document.documentElement.classList.contains("dark");
+	});
 
 	const shouldReduceMotion = useReducedMotion();
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setScrolled(window.scrollY > 20);
+			const isScrolled = window.scrollY > 20;
+
+			setScrolled((current) => (current === isScrolled ? current : isScrolled));
 		};
 
 		handleScroll();
 
-		window.addEventListener("scroll", handleScroll, { passive: true });
+		window.addEventListener("scroll", handleScroll, {
+			passive: true,
+		});
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
@@ -40,8 +54,12 @@ function Navbar() {
 	}, []);
 
 	useEffect(() => {
+		const theme = darkMode ? "dark" : "light";
+
 		document.documentElement.classList.toggle("dark", darkMode);
 		document.documentElement.classList.toggle("light", !darkMode);
+
+		setTheme(theme);
 	}, [darkMode]);
 
 	useEffect(() => {
@@ -127,6 +145,7 @@ function Navbar() {
 
 		window.requestAnimationFrame(() => {
 			const headerOffset = 100;
+
 			const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
 
 			window.scrollTo({
@@ -145,9 +164,9 @@ function Navbar() {
 			<AnimatePresence>
 				{mobileOpen && (
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						initial={shouldReduceMotion ? false : { opacity: 0 }}
+						animate={shouldReduceMotion ? {} : { opacity: 1 }}
+						exit={shouldReduceMotion ? {} : { opacity: 0 }}
 						transition={{ duration: 0.2 }}
 						onClick={closeMobileMenu}
 						className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden dark:bg-black/50"
@@ -156,16 +175,16 @@ function Navbar() {
 			</AnimatePresence>
 
 			<motion.header
-				initial={shouldReduceMotion ? false : { y: -70, opacity: 0 }}
-				animate={shouldReduceMotion ? {} : { y: 0, opacity: 1 }}
+				initial={shouldReduceMotion ? false : { opacity: 0 }}
+				animate={shouldReduceMotion ? {} : { opacity: 1 }}
 				transition={{
-					duration: 0.55,
-					ease: [0.22, 1, 0.36, 1],
+					duration: 0.35,
+					ease: "easeOut",
 				}}
 				className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 lg:px-8"
 			>
 				<div
-					className={`border-border/60 bg-background/85 relative mx-auto max-w-7xl border backdrop-blur-2xl transition-all duration-300 ${
+					className={`border-border/60 bg-background/85 relative mx-auto max-w-7xl overflow-hidden border backdrop-blur-2xl transition-all duration-300 ${
 						mobileOpen
 							? "rounded-2xl shadow-2xl"
 							: scrolled
@@ -175,9 +194,13 @@ function Navbar() {
 				>
 					{scrolled && (
 						<motion.div
-							initial={{ scaleX: 0 }}
-							animate={{ scaleX: 1 }}
-							className="bg-primary-500 absolute inset-x-8 top-0 h-px origin-left"
+							initial={shouldReduceMotion ? false : { scaleX: 0 }}
+							animate={shouldReduceMotion ? {} : { scaleX: 1 }}
+							transition={{
+								duration: 0.3,
+								ease: [0.22, 1, 0.36, 1],
+							}}
+							className="bg-primary-500 absolute inset-x-8 top-0 z-10 h-px origin-left"
 						/>
 					)}
 
@@ -299,7 +322,8 @@ function Navbar() {
 
 							<motion.a
 								target="_blank"
-								href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
+								rel="noopener noreferrer"
+								href={REGISTER_URL}
 								whileHover={
 									shouldReduceMotion
 										? {}
@@ -430,7 +454,8 @@ function Navbar() {
 
 										<motion.a
 											target="_blank"
-											href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
+											rel="noopener noreferrer"
+											href={REGISTER_URL}
 											onClick={closeMobileMenu}
 											initial={
 												shouldReduceMotion ? false : { opacity: 0, y: 8 }

@@ -9,29 +9,9 @@ function CTA() {
 	return (
 		<section
 			id="register"
-			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
+			className="bg-background relative mb-12 overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
 			<div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
-				<motion.div
-					initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
-					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.6 }}
-					className="mb-12 flex items-center justify-between sm:mb-16"
-				>
-					<div className="flex items-center gap-3">
-						<span className="bg-primary-500 size-2 rounded-full" />
-
-						<span className="text-primary-500 font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
-							07 / Registration
-						</span>
-					</div>
-
-					<span className="text-muted hidden font-mono text-[9px] tracking-[0.18em] uppercase sm:block">
-						TechThrive 2026
-					</span>
-				</motion.div>
-
 				<div className="grid lg:grid-cols-[1fr_0.42fr]">
 					<motion.div
 						initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
