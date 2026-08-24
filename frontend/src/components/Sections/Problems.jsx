@@ -139,8 +139,7 @@ function Problems() {
 						<div className="bg-border hidden h-10 w-px sm:block" />
 
 						<p className="text-muted max-w-xs text-xs leading-5">
-							Selected Smart India Hackathon challenges across technology, governance
-							and real-world impact.
+							Official SIH 2026 problem statements selected for TechThrive 2026.
 						</p>
 					</div>
 				</motion.div>

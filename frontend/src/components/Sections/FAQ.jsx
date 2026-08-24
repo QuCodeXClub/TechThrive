@@ -25,7 +25,7 @@ const faqs = [
 	},
 	{
 		q: "When is Round 1?",
-		a: "Round 1 will be conducted on 7th and 8th September 2026 at Computer Centre (E310).",
+		a: "Round 1 will be conducted on 7th and 8th September 2026, from 09:55 AM to 04:20 PM IST, at Computer Centre (E310).",
 	},
 	{
 		q: "What is the format of Round 1?",
@@ -33,7 +33,7 @@ const faqs = [
 	},
 	{
 		q: "When is Round 2?",
-		a: "Round 2 is scheduled for 15 September 2026.",
+		a: "Round 2 is scheduled for 15 September 2026, from 09:30 AM to 04:00 PM IST.",
 	},
 	{
 		q: "How long is Round 2?",
@@ -41,11 +41,11 @@ const faqs = [
 	},
 	{
 		q: "What happens after Round 1?",
-		a: "Selected teams advance to Round 2. High-potential teams also receive faculty mentorship to refine their concepts, technical approach and documentation.",
+		a: "Selected teams advance to the TechThrive 2026 Grand Finale. Strongest-performing teams are then considered for mentorship and the university's SIH 2026 nomination process.",
 	},
 	{
 		q: "How does SIH nomination work?",
-		a: "Top-performing teams will be finalized for official SIH nomination through Unstop, official SIH channels and university guidelines.",
+		a: "Top-performing teams from the Grand Finale are considered for the university's SIH 2026 nomination, subject to evaluation and university guidelines.",
 	},
 ];
 
@@ -102,8 +102,8 @@ function FAQ() {
 
 						<div className="lg:pb-1">
 							<p className="text-muted max-w-sm text-sm leading-6">
-								Everything you need to know before registering, presenting and
-								moving through the TechThrive selection process.
+								Everything you need to know before submitting, presenting and moving
+								through the TechThrive selection process.
 							</p>
 
 							<div className="mt-4 flex items-center gap-3">
@@ -156,7 +156,6 @@ function FAQ() {
 										aria-selected={isActive}
 										className="group border-border relative flex w-full cursor-pointer items-start gap-4 border-b py-4 text-left transition-colors sm:py-5"
 									>
-										{/* Number */}
 										<span
 											className={[
 												"w-7 shrink-0 pt-0.5 font-mono text-[9px] font-semibold transition-colors",
@@ -168,7 +167,6 @@ function FAQ() {
 											{String(index + 1).padStart(2, "0")}
 										</span>
 
-										{/* Question */}
 										<span
 											className={[
 												"flex-1 pr-4 text-sm leading-5 font-medium transition-colors",
@@ -189,7 +187,6 @@ function FAQ() {
 											].join(" ")}
 										/>
 
-										{/* Active indicator */}
 										<motion.span
 											initial={false}
 											animate={{
@@ -213,10 +210,8 @@ function FAQ() {
 						className="relative lg:pt-7"
 					>
 						<div className="border-border relative min-h-[23rem] border-y py-8 sm:min-h-[25rem] sm:py-10 lg:border-t-0 lg:border-b lg:py-9 lg:pl-10">
-							{/* Decorative vertical line */}
 							<div className="bg-primary-500/30 absolute top-0 bottom-0 left-0 hidden w-px lg:block" />
 
-							{/* Background number */}
 							<div className="text-foreground/[0.025] pointer-events-none absolute top-4 right-0 font-mono text-[7rem] leading-none font-semibold tracking-[-0.08em] select-none sm:text-[9rem]">
 								{String(activeIndex + 1).padStart(2, "0")}
 							</div>

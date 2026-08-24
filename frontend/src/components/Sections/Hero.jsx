@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, CalendarDays, ChevronRight, MapPin, Users } from "lucide-react";
+import { ArrowDown, ArrowUpRight, CalendarDays, ChevronRight, MapPin } from "lucide-react";
 
 import CodeXLogo from "@/assets/codex-logo.svg";
 import HeroImage from "@/assets/hero-image.jpeg";
@@ -78,7 +78,7 @@ function Hero() {
 							<span className="bg-primary-500 h-px w-10" />
 
 							<span className="text-primary-500 font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
-								Internal SIH Qualification
+								Offline Hackathon
 							</span>
 						</motion.div>
 
@@ -115,16 +115,17 @@ function Hero() {
 							transition={{ duration: 0.6, delay: 0.28 }}
 							className="text-muted mt-7 max-w-2xl text-sm leading-7 sm:text-base sm:leading-8"
 						>
-							Quantum University's internal hackathon for discovering, developing and
-							selecting the strongest student teams for the{" "}
+							TechThrive 2026 is CodeX Club's internal hackathon at Quantum
+							University, conducted under the supervision of the CSE & CA Departments
+							to identify, evaluate and mentor student teams for the
 							<span className="text-foreground font-medium">
-								Smart India Hackathon.
+								Smart India Hackathon 2026.
 							</span>
 						</motion.p>
 
 						<img
 							src={SIHComplete}
-							alt="CodeX Club"
+							alt="Smart India Hackathon 2026"
 							className="z-20 my-4 h-16 w-auto rounded-xl"
 						/>
 
@@ -133,10 +134,29 @@ function Hero() {
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.36 }}
-							className="border-border mt-8 grid max-w-2xl grid-cols-3 border-y"
+							className="border-border mt-8 grid max-w-2xl gap-3 border-y py-4 sm:grid-cols-3 sm:gap-0 sm:py-0"
 						>
+							{/* Submission */}
+							<div className="sm:py-5 sm:pr-5">
+								<div className="flex items-center gap-2">
+									<CalendarDays className="text-primary-500 size-3.5" />
+
+									<span className="text-muted font-mono text-[8px] tracking-[0.14em] uppercase">
+										Submission
+									</span>
+								</div>
+
+								<p className="text-foreground mt-2 text-sm leading-5 font-semibold">
+									06–09 Sep 2026
+								</p>
+
+								<p className="text-muted mt-1 text-[10px] leading-4">
+									SIH 2026 Solution PPT
+								</p>
+							</div>
+
 							{/* Round 1 */}
-							<div className="py-4 pr-3 sm:py-5 sm:pr-5">
+							<div className="border-border sm:border-l sm:px-5 sm:py-5">
 								<div className="flex items-center gap-2">
 									<CalendarDays className="text-primary-500 size-3.5" />
 
@@ -145,13 +165,17 @@ function Hero() {
 									</span>
 								</div>
 
-								<p className="text-foreground mt-2 text-sm font-semibold">
-									7–8 Sep
+								<p className="text-foreground mt-2 text-sm leading-5 font-semibold">
+									07–08 Sep 2026
+								</p>
+
+								<p className="text-muted mt-1 text-[10px] leading-4">
+									Computer Centre (E310)
 								</p>
 							</div>
 
 							{/* Round 2 */}
-							<div className="border-border border-l px-3 py-4 sm:px-5 sm:py-5">
+							<div className="border-border sm:border-l sm:px-5 sm:py-5">
 								<div className="flex items-center gap-2">
 									<CalendarDays className="text-primary-500 size-3.5" />
 
@@ -160,21 +184,12 @@ function Hero() {
 									</span>
 								</div>
 
-								<p className="text-foreground mt-2 text-sm font-semibold">15 Sep</p>
-							</div>
+								<p className="text-foreground mt-2 text-sm leading-5 font-semibold">
+									15 Sep 2026
+								</p>
 
-							{/* Team */}
-							<div className="border-border border-l py-4 pl-3 sm:py-5 sm:pl-5">
-								<div className="flex items-center gap-2">
-									<Users className="text-primary-500 size-3.5" />
-
-									<span className="text-muted font-mono text-[8px] tracking-[0.14em] uppercase">
-										Team Size
-									</span>
-								</div>
-
-								<p className="text-foreground mt-2 text-sm font-semibold">
-									6 members
+								<p className="text-muted mt-1 text-[10px] leading-4">
+									7-hour Grand Finale
 								</p>
 							</div>
 						</motion.div>
@@ -219,7 +234,7 @@ function Hero() {
 							</span>
 
 							<span className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
-								Registration · ₹150 / Team
+								6 members · ₹150 / team
 							</span>
 						</motion.div>
 					</div>
@@ -336,11 +351,11 @@ function Hero() {
 						<div className="border-border mt-8 flex items-center justify-between border-t pt-4">
 							<div>
 								<p className="text-muted font-mono text-[7px] tracking-[0.14em] uppercase">
-									Internal Selection
+									Timeline
 								</p>
 
 								<p className="text-foreground mt-1 text-xs font-semibold">
-									One campus · One opportunity
+									Submission → Screening → Grand Finale
 								</p>
 							</div>
 

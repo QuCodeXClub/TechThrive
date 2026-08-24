@@ -3,88 +3,71 @@ import {
 	ArrowDownRight,
 	ArrowUpRight,
 	BrainCircuit,
-	Check,
 	ChevronRight,
 	Flag,
 	MapPin,
 	Rocket,
 	Sparkles,
-	Users,
 } from "lucide-react";
 import { useState } from "react";
 
 const journey = [
 	{
 		number: "01",
-		date: "20–25",
-		month: "AUG",
+		date: "06–09",
+		month: "SEP",
 		year: "2026",
-		title: "Registration",
-		label: "START",
-		description: "Register your team and enter the TechThrive selection pathway.",
-		details: ["₹150 per team", "6 members", "1 female member"],
-		icon: Users,
+		title: "Submission",
+		label: "STAGE 01",
+		description: "Submit the SIH 2026 Solution PPT in the prescribed format for review.",
+		details: ["SIH PPT template", "Unstop submission", "06 Sep to 09 Sep"],
+		icon: Sparkles,
 	},
 	{
 		number: "02",
 		date: "07–08",
 		month: "SEP",
 		year: "2026",
-		title: "SIH Qualification",
+		title: "SIH Qualification & Screening",
 		label: "ROUND 01",
-		description: "Present your solution against the selected SIH problem statements.",
-		details: ["Computer Centre — E310", "Scheduled presentations", "Problem screening"],
+		description:
+			"Scheduled time-slot presentations, problem screening and evaluation by a panel.",
+		details: [
+			"Computer Centre (E310)",
+			"09:55 AM to 04:20 PM IST",
+			"Presentation and screening",
+		],
 		icon: BrainCircuit,
 	},
 	{
 		number: "03",
-		date: "AFTER",
-		month: "ROUND 01",
-		year: "2026",
-		title: "Mentorship",
-		label: "REFINE",
-		description: "Selected teams receive focused guidance to strengthen their solutions.",
-		details: ["Faculty mentorship", "Technical refinement", "SIH preparation"],
-		icon: Sparkles,
-	},
-	{
-		number: "04",
 		date: "15",
 		month: "SEP",
 		year: "2026",
-		title: "TechThrive Sprint",
+		title: "TechThrive Grand Finale",
 		label: "ROUND 02",
-		description: "A focused 7-hour build sprint for the strongest teams.",
-		details: ["7-hour hackathon", "Selected teams", "Live build"],
+		description:
+			"Selected teams turn their ideas into working prototypes in a 7-hour build hackathon.",
+		details: ["09:30 AM to 04:00 PM IST", "7-hour build hackathon", "Prototype demonstration"],
 		icon: Rocket,
 	},
 	{
-		number: "05",
-		date: "FINAL",
-		month: "EVAL",
+		number: "04",
+		date: "AFTER",
+		month: "ROUND 02",
 		year: "2026",
 		title: "Final Selection",
-		label: "DECIDE",
-		description: "Final solutions are assessed for implementation, feasibility and innovation.",
-		details: ["Final evaluation", "Solution assessment", "Team performance"],
-		icon: Check,
-	},
-	{
-		number: "06",
-		date: "NEXT",
-		month: "STAGE",
-		year: "SIH",
-		title: "SIH Nomination",
-		label: "DESTINATION",
-		description: "The strongest teams move toward official SIH nomination.",
-		details: ["University nomination", "SIH pathway", "Represent Quantum"],
+		label: "NEXT",
+		description:
+			"Top teams are considered for the university's SIH 2026 nomination and further mentorship.",
+		details: ["Evaluation review", "Mentorship follow-up", "SIH consideration"],
 		icon: Flag,
 	},
 ];
 
 function Journey() {
 	const shouldReduceMotion = useReducedMotion();
-	const [active, setActive] = useState(1);
+	const [active, setActive] = useState(0);
 
 	const activeStage = journey[active];
 	const ActiveIcon = activeStage.icon;
@@ -126,7 +109,7 @@ function Journey() {
 						</div>
 
 						<span className="text-muted hidden font-mono text-[8px] tracking-[0.18em] uppercase sm:block">
-							06 stages · 01 destination
+							04 stages · 01 destination
 						</span>
 					</div>
 
@@ -141,28 +124,28 @@ function Journey() {
 							</div>
 
 							<h2 className="font-display text-foreground max-w-2xl text-3xl leading-[0.9] font-semibold tracking-[-0.055em] sm:text-4xl lg:text-5xl">
-								From first step
+								From submission
 								<br />
-								<span className="text-muted">to final selection.</span>
+								<span className="text-muted">to final nomination.</span>
 							</h2>
 						</div>
 
 						<div className="lg:self-end">
 							<div className="border-border border-l pl-5 sm:pl-6">
 								<p className="text-muted max-w-sm text-sm leading-7">
-									Every stage is designed to progressively test the team, the idea
-									and its potential to move beyond TechThrive.
+									Every stage is designed to test the team, the idea and its
+									readiness to move beyond TechThrive.
 								</p>
 
 								<div className="mt-5 flex items-center gap-3">
 									<span className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.16em] uppercase">
-										Registration
+										Submission
 									</span>
 
 									<ArrowDownRight className="text-muted size-3" />
 
 									<span className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
-										SIH
+										Finale
 									</span>
 								</div>
 							</div>
@@ -183,7 +166,7 @@ function Journey() {
 								</span>
 
 								<span className="text-primary-500 font-mono text-[8px] font-semibold">
-									{String(active + 1).padStart(2, "0")} / 06
+									{String(active + 1).padStart(2, "0")} / 04
 								</span>
 							</div>
 

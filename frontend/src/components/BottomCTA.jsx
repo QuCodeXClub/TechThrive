@@ -24,7 +24,7 @@ function CTA() {
 						<span className="bg-primary-500 size-2 rounded-full" />
 
 						<span className="text-primary-500 font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
-							05 / Registration
+							07 / Registration
 						</span>
 					</div>
 
@@ -61,17 +61,18 @@ function CTA() {
 
 						<div className="mt-10 flex max-w-2xl flex-col gap-7 sm:mt-14 sm:flex-row sm:items-end sm:justify-between">
 							<p className="text-muted max-w-lg text-sm leading-6 sm:text-base">
-								Join TechThrive 2026 at Quantum University, Roorkee. Solve a real
-								problem, build with your team and take your first step toward SIH.
+								Join TechThrive 2026 at Quantum University, Roorkee. Register on
+								Unstop, submit the SIH 2026 Solution PPT and move into the official
+								qualification process.
 							</p>
 
 							<div className="shrink-0">
 								<div className="text-primary-500 font-mono text-[9px] tracking-[0.18em] uppercase">
-									Registration window
+									Submission window
 								</div>
 
 								<div className="text-foreground mt-2 font-mono text-sm font-semibold">
-									20 — 25 AUG 2026
+									06 — 09 SEP 2026
 								</div>
 							</div>
 						</div>
@@ -137,7 +138,7 @@ function CTA() {
 									href="https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052"
 									className="group bg-background text-foreground flex min-h-14 w-full items-center justify-between px-5 text-sm font-semibold transition-transform duration-300 hover:-translate-y-1"
 								>
-									<span>Register your team</span>
+									<span>Register on Unstop</span>
 
 									<span className="bg-primary-500 text-primary-foreground flex size-9 items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
 										<ArrowUpRight className="size-4" />
@@ -190,7 +191,7 @@ function CTA() {
 						</p>
 
 						<p className="text-primary-500 mt-2 text-sm font-medium">
-							Problem → Prototype → SIH
+							Submission → Screening → Grand Finale
 						</p>
 					</div>
 				</motion.div>

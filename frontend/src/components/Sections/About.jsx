@@ -43,7 +43,7 @@ function About() {
 					</div>
 
 					<span className="text-muted font-mono text-[8px] tracking-[0.18em] uppercase">
-						Internal SIH Qualification
+						Offline Hackathon
 					</span>
 				</div>
 
@@ -69,7 +69,8 @@ function About() {
 						</h2>
 
 						<h3 className="font-display text-foreground mt-5 max-w-2xl text-xl leading-[1] font-medium tracking-[-0.035em] sm:text-2xl">
-							We are looking for teams capable of making good ideas real.
+							We are looking for teams capable of turning clear ideas into working
+							solutions.
 						</h3>
 					</motion.div>
 
@@ -90,9 +91,10 @@ function About() {
 							</div>
 
 							<p className="text-muted mt-4 max-w-sm text-sm leading-7">
-								TechThrive is Quantum University's internal hackathon, organized by
-								CodeX Club to identify, evaluate and mentor student teams with the
-								potential to reach the Smart India Hackathon stage.
+								TechThrive is an offline hackathon by CodeX Club, Quantum
+								University, conducted under the supervision of the CSE & CA
+								Departments to identify, evaluate and mentor student teams for the
+								Smart India Hackathon 2026 pathway.
 							</p>
 
 							<div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">

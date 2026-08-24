@@ -7,7 +7,7 @@ const prizes = [
 		title: "Winning Team",
 		kicker: "TOP HONOURS",
 		description:
-			"The strongest team earns the opportunity to move forward on the official SIH nomination pathway, backed by faculty mentorship.",
+			"The strongest-performing team will be considered for the university's SIH 2026 nomination and further mentorship.",
 		benefits: ["SIH Nomination Pathway", "Faculty Mentorship"],
 		icon: Award,
 		featured: true,
@@ -17,7 +17,7 @@ const prizes = [
 		title: "Selected Teams",
 		kicker: "ROUND 02",
 		description:
-			"Teams selected through Round 1 advance to the 7-hour TechThrive internal hackathon.",
+			"Teams selected through Round 1 advance to the 7-hour TechThrive Grand Finale.",
 		benefits: ["Round 2 Qualification", "Faculty Guidance"],
 		icon: Users,
 		featured: false,
@@ -84,8 +84,8 @@ function Prizes() {
 
 						<div className="lg:pb-1">
 							<p className="text-muted max-w-sm text-sm leading-6">
-								TechThrive rewards progress at every stage — from getting selected
-								to building something strong enough to move forward.
+								TechThrive rewards progress at every stage — from submission and
+								qualification to building something strong enough to move forward.
 							</p>
 
 							<div className="mt-4 flex items-center gap-3">
