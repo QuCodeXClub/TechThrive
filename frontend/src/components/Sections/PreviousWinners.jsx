@@ -4,9 +4,9 @@ import { Trophy } from "lucide-react";
 import teamV1_1 from "@/assets/team-v1-1.jpg";
 import teamV1_2 from "@/assets/team-v1-2.jpg";
 import teamV1_3 from "@/assets/team-v1-3.jpg";
-import teamV2_1 from "@/assets/team-V2-1.jpeg";
-import teamV2_2 from "@/assets/team-V2-2.jpeg";
-import teamV2_3 from "@/assets/team-V2-3.jpeg";
+import teamV2_1 from "@/assets/team-V2-1.jpg";
+import teamV2_2 from "@/assets/team-V2-2.jpg";
+import teamV2_3 from "@/assets/team-V2-3.jpg";
 
 const editions = [
 	{
