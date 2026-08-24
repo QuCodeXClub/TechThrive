@@ -16,7 +16,7 @@ const journey = [
 		date: "06–09",
 		month: "SEP",
 		year: "2026",
-		title: "Submission",
+		title: "PPT Submission",
 		label: "STAGE 01",
 		description: "Submit the SIH 2026 Solution PPT in the prescribed format for review.",
 		details: ["SIH PPT template", "Unstop submission", "06 Sep to 09 Sep"],
@@ -27,7 +27,7 @@ const journey = [
 		date: "07–08",
 		month: "SEP",
 		year: "2026",
-		title: "SIH Qualification & Screening",
+		title: "SIH Qualification",
 		label: "ROUND 01",
 		description:
 			"Scheduled time-slot presentations, problem screening and evaluation by a panel.",
@@ -399,7 +399,7 @@ function Journey() {
 
 												<p
 													className={[
-														"mt-0.5 w-full min-w-0 overflow-hidden text-[7px] leading-3 font-medium break-words sm:text-[8px]",
+														"mt-2 mb-1 w-full min-w-0 overflow-hidden text-[12px] leading-3 font-medium break-words sm:leading-4",
 														isActive ? "text-foreground" : "text-muted",
 													].join(" ")}
 												>

@@ -212,7 +212,7 @@ function Hero() {
 							</motion.a>
 
 							<a
-								href="#problems"
+								href="#themes"
 								className="border-border bg-surface-raised/40 text-foreground hover:border-primary-500/40 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border px-6 py-3.5 text-sm font-medium transition-colors"
 							>
 								Explore Challenges
