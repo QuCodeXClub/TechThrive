@@ -14,7 +14,6 @@ function Hero() {
 			id="home"
 			className="bg-background relative min-h-[100svh] overflow-hidden pt-20 sm:pt-24 lg:pt-20"
 		>
-			{/* Subtle background accents */}
 			<div className="pointer-events-none absolute inset-0 overflow-hidden">
 				<div className="bg-primary-500/[0.035] absolute top-20 right-[-12rem] size-[32rem] rounded-full blur-[120px]" />
 
@@ -32,11 +31,7 @@ function Hero() {
 
 			<div className="relative mx-auto flex min-h-[calc(100svh-80px)] max-w-7xl items-center px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
 				<div className="grid w-full items-center gap-14 lg:grid-cols-[1fr_360px] lg:gap-20 xl:grid-cols-[1fr_420px]">
-					{/* =====================================================
-					    LEFT CONTENT
-					===================================================== */}
 					<div className="relative z-10 max-w-4xl">
-						{/* Brand */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -68,7 +63,6 @@ function Hero() {
 							</div>
 						</motion.div>
 
-						{/* Eyebrow */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, x: -12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
@@ -78,11 +72,10 @@ function Hero() {
 							<span className="bg-primary-500 h-px w-10" />
 
 							<span className="text-primary-500 font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
-								Offline Hackathon
+								Hackathon
 							</span>
 						</motion.div>
 
-						{/* Main heading */}
 						<motion.h1
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -94,7 +87,6 @@ function Hero() {
 							<span className="text-foreground/20">.</span>
 						</motion.h1>
 
-						{/* Tagline */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -108,7 +100,6 @@ function Hero() {
 							</p>
 						</motion.div>
 
-						{/* Description */}
 						<motion.p
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -129,14 +120,12 @@ function Hero() {
 							className="z-20 my-4 h-16 w-auto rounded-xl"
 						/>
 
-						{/* Event information */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.36 }}
 							className="border-border mt-8 grid max-w-2xl gap-3 border-y py-4 sm:grid-cols-3 sm:gap-0 sm:py-0"
 						>
-							{/* Submission */}
 							<div className="sm:py-5 sm:pr-5">
 								<div className="flex items-center gap-2">
 									<CalendarDays className="text-primary-500 size-3.5" />
@@ -155,7 +144,6 @@ function Hero() {
 								</p>
 							</div>
 
-							{/* Round 1 */}
 							<div className="border-border sm:border-l sm:px-5 sm:py-5">
 								<div className="flex items-center gap-2">
 									<CalendarDays className="text-primary-500 size-3.5" />
@@ -174,7 +162,6 @@ function Hero() {
 								</p>
 							</div>
 
-							{/* Round 2 */}
 							<div className="border-border sm:border-l sm:px-5 sm:py-5">
 								<div className="flex items-center gap-2">
 									<CalendarDays className="text-primary-500 size-3.5" />
@@ -194,7 +181,6 @@ function Hero() {
 							</div>
 						</motion.div>
 
-						{/* Buttons */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -221,7 +207,6 @@ function Hero() {
 							</a>
 						</motion.div>
 
-						{/* Registration note */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1 }}
@@ -239,9 +224,6 @@ function Hero() {
 						</motion.div>
 					</div>
 
-					{/* =====================================================
-					    RIGHT SMALL IMAGE PANEL
-					===================================================== */}
 					<motion.div
 						initial={shouldReduceMotion ? false : { opacity: 0, x: 25, y: 10 }}
 						animate={shouldReduceMotion ? {} : { opacity: 1, x: 0, y: 0 }}
@@ -252,12 +234,10 @@ function Hero() {
 						}}
 						className="relative mx-auto w-full max-w-[380px] lg:mx-0 lg:ml-auto"
 					>
-						{/* Small decorative number */}
 						<div className="text-primary-500/20 pointer-events-none absolute -top-10 -left-4 font-mono text-7xl font-bold tracking-[-0.08em] select-none">
 							01
 						</div>
 
-						{/* Image card */}
 						<div className="relative">
 							<div className="border-border bg-surface-raised relative overflow-hidden rounded-2xl border p-2 shadow-2xl shadow-black/10">
 								<div className="relative aspect-[4/5] overflow-hidden rounded-xl">
@@ -267,7 +247,6 @@ function Hero() {
 										className="z-20 h-full w-full object-cover transition-transform duration-700 hover:scale-[1.025]"
 									/>
 
-									{/* Very subtle image overlay */}
 									<div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
 
 									{/* Image label */}
@@ -281,7 +260,6 @@ function Hero() {
 										</span>
 									</div>
 
-									{/* Image caption */}
 									<div className="absolute right-4 bottom-4 left-4">
 										<div className="mb-2 flex items-center gap-2">
 											<span className="bg-primary-400 h-px w-5" />
@@ -300,7 +278,6 @@ function Hero() {
 								</div>
 							</div>
 
-							{/* Location card */}
 							<div className="border-border bg-background absolute -bottom-5 -left-5 hidden w-52 rounded-xl border p-3 shadow-xl sm:block">
 								<div className="flex items-center gap-3">
 									<div className="bg-primary-500/10 flex size-9 shrink-0 items-center justify-center rounded-lg">
@@ -323,7 +300,6 @@ function Hero() {
 								</div>
 							</div>
 
-							{/* SIH destination card */}
 							<div className="border-border bg-background absolute -top-4 -right-4 hidden w-48 rounded-xl border p-3 shadow-xl md:block">
 								<div className="flex items-center gap-3">
 									<div className="border-border bg-surface-raised flex size-9 shrink-0 items-center justify-center rounded-lg border">
@@ -347,7 +323,6 @@ function Hero() {
 							</div>
 						</div>
 
-						{/* Small bottom metadata */}
 						<div className="border-border mt-8 flex items-center justify-between border-t pt-4">
 							<div>
 								<p className="text-muted font-mono text-[7px] tracking-[0.14em] uppercase">
@@ -370,7 +345,6 @@ function Hero() {
 					</motion.div>
 				</div>
 
-				{/* Scroll indicator */}
 				<motion.a
 					href="#about"
 					initial={shouldReduceMotion ? false : { opacity: 0 }}

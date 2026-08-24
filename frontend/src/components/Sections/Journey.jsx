@@ -91,8 +91,6 @@ function Journey() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
-				{/* HEADER */}
-
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -153,12 +151,8 @@ function Journey() {
 					</div>
 				</motion.div>
 
-				{/* MAIN JOURNEY */}
-
 				<div className="mt-12 sm:mt-14 lg:mt-16">
 					<div className="grid lg:grid-cols-[0.72fr_1.28fr]">
-						{/* STAGE NAV */}
-
 						<div className="border-border border-y lg:border-y-0 lg:border-r">
 							<div className="flex items-center justify-between py-5 lg:pr-8">
 								<span className="text-muted font-mono text-[8px] tracking-[0.18em] uppercase">
@@ -251,8 +245,6 @@ function Journey() {
 							</div>
 						</div>
 
-						{/* ACTIVE STAGE */}
-
 						<motion.div
 							key={activeStage.number}
 							initial={
@@ -274,15 +266,11 @@ function Journey() {
 							transition={{ duration: 0.4 }}
 							className="relative min-h-[400px] overflow-hidden border-b lg:border-y"
 						>
-							{/* decorative giant number */}
-
 							<div className="pointer-events-none absolute top-[-3rem] right-[-1rem] select-none">
 								<span className="font-display text-foreground/[0.025] text-[14rem] leading-none font-semibold tracking-[-0.12em]">
 									{activeStage.number}
 								</span>
 							</div>
-
-							{/* grid texture */}
 
 							<div className="pointer-events-none absolute right-0 bottom-0 h-1/2 w-1/2 opacity-[0.025]">
 								<div
@@ -366,8 +354,6 @@ function Journey() {
 						</motion.div>
 					</div>
 				</div>
-
-				{/* BOTTOM META */}
 
 				<div className="border-border mt-7 flex flex-col gap-4 border-t pt-5 sm:flex-row sm:items-center sm:justify-between">
 					<div className="flex items-center gap-3">

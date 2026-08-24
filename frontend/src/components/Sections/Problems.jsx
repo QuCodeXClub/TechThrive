@@ -100,8 +100,6 @@ function Problems() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
-				{/* HEADER */}
-
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -144,11 +142,7 @@ function Problems() {
 					</div>
 				</motion.div>
 
-				{/* MAIN BOARD */}
-
 				<div className="mt-10 grid gap-1 lg:mt-12 lg:grid-cols-[0.95fr_1.05fr]">
-					{/* FEATURED PROBLEM */}
-
 					<motion.div
 						key={active.id}
 						initial={
@@ -170,8 +164,6 @@ function Problems() {
 						transition={{ duration: 0.4 }}
 						className="bg-surface-raised/40 border-border relative min-h-[390px] overflow-hidden border p-6 sm:p-8 lg:min-h-[440px] lg:p-10"
 					>
-						{/* Decorative number */}
-
 						<div className="pointer-events-none absolute top-[-2rem] right-[-1rem]">
 							<span className="font-display text-foreground/[0.025] text-[12rem] leading-none font-semibold tracking-[-0.1em]">
 								{String(activeIndex + 1).padStart(2, "0")}
@@ -232,8 +224,6 @@ function Problems() {
 							</div>
 						</div>
 					</motion.div>
-
-					{/* PROBLEM SELECTOR */}
 
 					<div className="border-border border-x border-b lg:border-b-0 lg:border-l-0">
 						<div className="grid sm:grid-cols-2">
@@ -333,8 +323,6 @@ function Problems() {
 						</div>
 					</div>
 				</div>
-
-				{/* BOTTOM SIGNAL */}
 
 				<div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 					<div className="flex items-center gap-3">

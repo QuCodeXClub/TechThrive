@@ -196,7 +196,7 @@ function Navbar() {
 
 							<div className="bg-border hidden h-8 w-px sm:block" />
 
-							<div className="hidden min-w-0 leading-none sm:block">
+							<div className="block min-w-0 leading-none">
 								<p className="font-display text-foreground text-sm font-bold tracking-tight">
 									TechThrive
 								</p>

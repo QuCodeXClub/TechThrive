@@ -42,7 +42,6 @@ function Prizes() {
 			id="prizes"
 			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
-			{/* Ambient detail */}
 			<div className="pointer-events-none absolute inset-0">
 				<div className="bg-primary-500/[0.025] absolute top-[-8rem] right-[-12rem] size-[30rem] rounded-full blur-[130px]" />
 
@@ -57,7 +56,6 @@ function Prizes() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
-				{/* HEADER */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -103,9 +101,7 @@ function Prizes() {
 					</div>
 				</motion.div>
 
-				{/* MAIN RECOGNITION GRID */}
 				<div className="mt-10 grid gap-0 lg:grid-cols-[0.3fr_1fr]">
-					{/* SIDE LABEL */}
 					<div className="border-border hidden border-r pr-8 lg:block">
 						<div className="sticky top-24">
 							<p className="text-muted font-mono text-[8px] tracking-[0.18em] uppercase">
@@ -125,7 +121,6 @@ function Prizes() {
 					</div>
 
 					<div className="lg:pl-10 xl:pl-14">
-						{/* WINNING TEAM */}
 						<motion.article
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
 							whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -134,7 +129,6 @@ function Prizes() {
 							className="group border-primary-500/40 relative border-y py-8 sm:py-10"
 						>
 							<div className="grid gap-8 sm:grid-cols-[90px_1fr_auto] sm:gap-8">
-								{/* NUMBER */}
 								<div className="relative">
 									<span className="font-display text-primary-500 text-5xl leading-none font-semibold tracking-[-0.07em]">
 										01
@@ -143,7 +137,6 @@ function Prizes() {
 									<div className="bg-primary-500 mt-5 hidden h-px w-7 sm:block" />
 								</div>
 
-								{/* CONTENT */}
 								<div>
 									<div className="flex items-center gap-2">
 										<Award className="text-primary-500 size-4" />
@@ -175,7 +168,6 @@ function Prizes() {
 									</div>
 								</div>
 
-								{/* ACTION */}
 								<div className="flex items-start justify-between sm:justify-end">
 									<span className="text-muted font-mono text-[8px] tracking-[0.15em] uppercase sm:hidden">
 										01 / 03
@@ -187,11 +179,9 @@ function Prizes() {
 								</div>
 							</div>
 
-							{/* Accent */}
 							<div className="bg-primary-500 absolute bottom-0 left-0 h-px w-0 transition-all duration-500 group-hover:w-full" />
 						</motion.article>
 
-						{/* SECOND + THIRD */}
 						<div className="grid sm:grid-cols-2">
 							{prizes.slice(1).map((prize, index) => {
 								const Icon = prize.icon;
@@ -270,7 +260,6 @@ function Prizes() {
 					</div>
 				</div>
 
-				{/* FOOTER */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1 }}

@@ -60,7 +60,6 @@ function FAQ() {
 			id="faq"
 			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
-			{/* Background detail */}
 			<div className="pointer-events-none absolute inset-0">
 				<div className="bg-primary-500/[0.025] absolute top-[-10rem] right-[-12rem] size-[30rem] rounded-full blur-[140px]" />
 
@@ -75,7 +74,6 @@ function FAQ() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
-				{/* HEADER */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -121,9 +119,7 @@ function FAQ() {
 					</div>
 				</motion.div>
 
-				{/* FAQ EXPLORER */}
 				<div className="mt-10 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
-					{/* QUESTIONS */}
 					<motion.div
 						initial={shouldReduceMotion ? false : { opacity: 0, x: -15 }}
 						whileInView={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
@@ -201,7 +197,6 @@ function FAQ() {
 						</div>
 					</motion.div>
 
-					{/* ANSWER */}
 					<motion.div
 						initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
 						whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -296,7 +291,6 @@ function FAQ() {
 					</motion.div>
 				</div>
 
-				{/* FOOTER */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1 }}

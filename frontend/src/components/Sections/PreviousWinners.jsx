@@ -31,7 +31,6 @@ function PreviousWinners() {
 			id="previous-winners"
 			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
-			{/* Background atmosphere */}
 			<div className="pointer-events-none absolute inset-0">
 				<div className="bg-primary-500/[0.035] absolute top-[-12rem] right-[-12rem] size-[34rem] rounded-full blur-[140px]" />
 
@@ -39,7 +38,6 @@ function PreviousWinners() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
-				{/* HEADER */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -83,7 +81,6 @@ function PreviousWinners() {
 					</div>
 				</motion.div>
 
-				{/* EDITIONS */}
 				<div className="mt-12 sm:mt-14 lg:mt-16">
 					{editions.map((edition, editionIndex) => (
 						<motion.article
@@ -116,7 +113,6 @@ function PreviousWinners() {
 							}
 						>
 							<div className="grid gap-8 lg:grid-cols-[180px_1fr] lg:gap-12">
-								{/* EDITION LABEL */}
 								<div className="lg:pt-2">
 									<div className="flex items-end gap-3 lg:block">
 										<span className="text-primary-500 font-mono text-[10px] font-semibold tracking-[0.16em]">
@@ -143,10 +139,8 @@ function PreviousWinners() {
 									</div>
 								</div>
 
-								{/* WINNER GRID */}
 								<div className="relative">
 									<div className="grid gap-4 sm:grid-cols-[1.45fr_0.55fr]">
-										{/* MAIN WINNER */}
 										<div className="group">
 											<div className="bg-surface-raised relative aspect-[1.18/1] overflow-hidden">
 												<div className="h-full w-full overflow-hidden rounded">
@@ -187,7 +181,6 @@ function PreviousWinners() {
 											</div>
 										</div>
 
-										{/* SECONDARY IMAGES */}
 										<div className="grid gap-4 sm:pt-12">
 											{edition.images.slice(1).map((image, index) => (
 												<div key={image} className="group">
@@ -222,7 +215,6 @@ function PreviousWinners() {
 										</div>
 									</div>
 
-									{/* Decorative corner */}
 									<div className="border-primary-500/25 pointer-events-none absolute -right-2 -bottom-2 size-20 border-r border-b sm:-right-3 sm:-bottom-3 sm:size-28" />
 								</div>
 							</div>
@@ -230,7 +222,6 @@ function PreviousWinners() {
 					))}
 				</div>
 
-				{/* FOOTER STRIP */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}

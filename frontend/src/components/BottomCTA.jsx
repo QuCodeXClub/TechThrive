@@ -12,7 +12,6 @@ function CTA() {
 			className="bg-background relative overflow-hidden py-24 sm:py-32 lg:py-40"
 		>
 			<div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
-				{/* Top label */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -33,9 +32,7 @@ function CTA() {
 					</span>
 				</motion.div>
 
-				{/* Main CTA */}
 				<div className="grid lg:grid-cols-[1fr_0.42fr]">
-					{/* Left */}
 					<motion.div
 						initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
 						whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -78,7 +75,6 @@ function CTA() {
 						</div>
 					</motion.div>
 
-					{/* Right action panel */}
 					<motion.div
 						initial={
 							shouldReduceMotion
@@ -94,7 +90,6 @@ function CTA() {
 						className="mt-12 lg:mt-0 lg:pl-10"
 					>
 						<div className="bg-primary-500 relative flex min-h-[25rem] flex-col justify-between overflow-hidden p-7 sm:p-9 lg:min-h-[32rem]">
-							{/* Decorative element */}
 							<div className="pointer-events-none absolute -top-20 -right-20 size-64 rounded-full border border-white/20" />
 
 							<div className="pointer-events-none absolute top-8 right-8">
@@ -157,7 +152,6 @@ function CTA() {
 					</motion.div>
 				</div>
 
-				{/* Bottom metadata */}
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1 }}
