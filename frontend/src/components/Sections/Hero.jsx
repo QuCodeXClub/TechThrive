@@ -4,6 +4,7 @@ import { ArrowDown, ArrowUpRight, CalendarDays, ChevronRight, MapPin, Users } fr
 import CodeXLogo from "@/assets/codex-logo.svg";
 import HeroImage from "@/assets/hero-image.jpeg";
 import SIHLogo from "@/assets/sih-logo.jpeg";
+import SIHComplete from "@/assets/sih.jpeg";
 
 function Hero() {
 	const shouldReduceMotion = useReducedMotion();
@@ -42,17 +43,27 @@ function Hero() {
 							transition={{ duration: 0.6 }}
 							className="mb-8 flex items-center gap-3"
 						>
-							<div className="border-border bg-surface-raised flex h-10 items-center rounded-lg border px-2">
-								<img src={CodeXLogo} alt="CodeX Club" className="z-20 h-7 w-auto" />
+							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
+								<img
+									alt="Quantum University"
+									className="z-20 h-6 w-auto"
+									src="https://res.cloudinary.com/fswmfdcp/image/upload/f_auto,q_auto/v1784629535/university-logo-icon_ekaqcj.svg"
+								/>
 							</div>
 
 							<div className="bg-border h-5 w-px" />
 
-							<div className="border-border bg-surface-raised flex h-10 items-center rounded-lg border px-2">
+							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
+								<img src={CodeXLogo} alt="CodeX Club" className="z-20 h-6 w-auto" />
+							</div>
+
+							<div className="bg-border h-5 w-px" />
+
+							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
 								<img
 									src={SIHLogo}
 									alt="CodeX Club"
-									className="z-20 h-7 w-auto rounded"
+									className="z-20 h-6 w-auto rounded"
 								/>
 							</div>
 						</motion.div>
@@ -110,6 +121,12 @@ function Hero() {
 								Smart India Hackathon.
 							</span>
 						</motion.p>
+
+						<img
+							src={SIHComplete}
+							alt="CodeX Club"
+							className="z-20 my-4 h-16 w-auto rounded-xl"
+						/>
 
 						{/* Event information */}
 						<motion.div
