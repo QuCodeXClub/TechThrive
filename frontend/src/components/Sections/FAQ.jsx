@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, ChevronDown, CircleHelp, MessageCircleQuestion } from "lucide-react";
+import { ChevronDown, CircleHelp, MessageCircleQuestion } from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
@@ -150,7 +150,7 @@ function FAQ() {
 										type="button"
 										onClick={() => setActiveIndex(index)}
 										aria-selected={isActive}
-										className="group border-border relative flex w-full cursor-pointer items-start gap-4 border-b py-4 text-left transition-colors sm:py-5"
+										className="group border-border relative flex w-full cursor-pointer items-start gap-4 border-b px-4 py-4 text-left transition-colors sm:py-5"
 									>
 										<span
 											className={[
@@ -276,14 +276,6 @@ function FAQ() {
 												TechThrive 2026
 											</span>
 										</div>
-
-										<a
-											href="#rules"
-											className="text-primary-500 hover:text-primary-400 group inline-flex items-center gap-2 text-[10px] font-semibold transition-colors"
-										>
-											Rules & evaluation
-											<ArrowUpRight className="size-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-										</a>
 									</div>
 								</div>
 							</motion.div>

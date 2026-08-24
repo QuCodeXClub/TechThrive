@@ -9,7 +9,7 @@ function CTA() {
 	return (
 		<section
 			id="register"
-			className="bg-background relative overflow-hidden py-24 sm:py-32 lg:py-40"
+			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
 			<div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
 				<motion.div
@@ -138,14 +138,6 @@ function CTA() {
 									<span className="bg-primary-500 text-primary-foreground flex size-9 items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
 										<ArrowUpRight className="size-4" />
 									</span>
-								</a>
-
-								<a
-									href="#rules"
-									className="mt-5 flex items-center justify-center gap-2 text-xs font-medium text-white/70 transition-colors hover:text-white"
-								>
-									Read the rules
-									<ArrowUpRight className="size-3.5" />
 								</a>
 							</div>
 						</div>

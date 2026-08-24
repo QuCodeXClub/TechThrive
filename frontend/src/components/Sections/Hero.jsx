@@ -5,6 +5,7 @@ import CodeXLogo from "@/assets/codex-logo.svg";
 import HeroImage from "@/assets/hero-image.jpeg";
 import SIHLogo from "@/assets/sih-logo.jpeg";
 import SIHComplete from "@/assets/sih.jpeg";
+import QuantumLogo from "@/assets/university-logo.webp";
 
 function Hero() {
 	const shouldReduceMotion = useReducedMotion();
@@ -12,7 +13,7 @@ function Hero() {
 	return (
 		<section
 			id="home"
-			className="bg-background relative min-h-[100svh] overflow-hidden pt-20 sm:pt-24 lg:pt-20"
+			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
 			<div className="pointer-events-none absolute inset-0 overflow-hidden">
 				<div className="bg-primary-500/[0.035] absolute top-20 right-[-12rem] size-[32rem] rounded-full blur-[120px]" />
@@ -42,7 +43,7 @@ function Hero() {
 								<img
 									alt="Quantum University"
 									className="z-20 h-6 w-auto"
-									src="https://res.cloudinary.com/fswmfdcp/image/upload/f_auto,q_auto/v1784629535/university-logo-icon_ekaqcj.svg"
+									src={QuantumLogo}
 								/>
 							</div>
 

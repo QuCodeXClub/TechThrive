@@ -91,58 +91,58 @@ function Problems() {
 	return (
 		<section
 			id="problems"
-			className="bg-background relative overflow-hidden py-14 sm:py-16 lg:py-20"
+			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
 			<div className="pointer-events-none absolute inset-0">
-				<div className="bg-primary-500/[0.03] absolute top-[-12rem] right-[-10rem] size-[30rem] rounded-full blur-[140px]" />
+				<div className="bg-primary-500/[0.03] absolute top-[-10rem] right-[-12rem] size-[24rem] rounded-full blur-[120px] sm:size-[30rem] sm:blur-[140px]" />
 
-				<div className="bg-primary-500/[0.02] absolute bottom-[-14rem] left-[-10rem] size-[28rem] rounded-full blur-[140px]" />
+				<div className="bg-primary-500/[0.02] absolute bottom-[-12rem] left-[-10rem] size-[24rem] rounded-full blur-[120px] sm:size-[28rem] sm:blur-[140px]" />
 			</div>
 
-			<div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10 xl:px-14">
+			<div className="relative z-10 mx-auto w-full max-w-[1500px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14">
 				<motion.div
 					initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
 					whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.3 }}
+					viewport={{ once: true, amount: 0.2 }}
 					transition={{ duration: 0.6 }}
-					className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end"
+					className="grid gap-7 sm:gap-8 md:gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-12"
 				>
-					<div>
+					<div className="min-w-0">
 						<div className="mb-4 flex items-center gap-3">
-							<span className="bg-primary-500 size-1.5 rounded-full" />
+							<span className="bg-primary-500 size-1.5 shrink-0 rounded-full" />
 
-							<span className="text-primary-500 font-mono text-[9px] font-semibold tracking-[0.2em] uppercase">
+							<span className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.16em] uppercase sm:text-[9px] sm:tracking-[0.2em]">
 								03 / Problem Statements
 							</span>
 						</div>
 
-						<h2 className="font-display text-foreground max-w-xl text-3xl leading-[0.9] font-semibold tracking-[-0.055em] sm:text-4xl lg:text-5xl">
+						<h2 className="font-display text-foreground max-w-xl text-[2rem] leading-[0.92] font-semibold tracking-[-0.055em] sm:text-4xl md:text-[2.65rem] lg:text-5xl">
 							Find a problem.
 							<br />
 							<span className="text-muted">Make it matter.</span>
 						</h2>
 					</div>
 
-					<div className="flex items-end gap-8 lg:pb-1">
-						<div>
-							<p className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
+					<div className="flex min-w-0 items-start gap-5 sm:gap-8 lg:pb-1">
+						<div className="shrink-0">
+							<p className="text-muted font-mono text-[7px] tracking-[0.14em] uppercase sm:text-[8px] sm:tracking-[0.16em]">
 								Challenge pool
 							</p>
 
-							<p className="font-display text-foreground mt-1 text-3xl leading-none font-semibold tracking-[-0.05em]">
+							<p className="font-display text-foreground mt-1 text-2xl leading-none font-semibold tracking-[-0.05em] sm:text-3xl">
 								08
 							</p>
 						</div>
 
 						<div className="bg-border hidden h-10 w-px sm:block" />
 
-						<p className="text-muted max-w-xs text-xs leading-5">
+						<p className="text-muted max-w-[19rem] text-[11px] leading-5 sm:text-xs">
 							Official SIH 2026 problem statements selected for TechThrive 2026.
 						</p>
 					</div>
 				</motion.div>
 
-				<div className="mt-10 grid gap-1 lg:mt-12 lg:grid-cols-[0.95fr_1.05fr]">
+				<div className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 md:mt-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-1">
 					<motion.div
 						key={active.id}
 						initial={
@@ -150,7 +150,7 @@ function Problems() {
 								? false
 								: {
 										opacity: 0,
-										x: -15,
+										x: -12,
 									}
 						}
 						animate={
@@ -161,72 +161,72 @@ function Problems() {
 										x: 0,
 									}
 						}
-						transition={{ duration: 0.4 }}
-						className="bg-surface-raised/40 border-border relative min-h-[390px] overflow-hidden border p-6 sm:p-8 lg:min-h-[440px] lg:p-10"
+						transition={{ duration: 0.35, ease: "easeOut" }}
+						className="bg-surface-raised/40 border-border relative flex h-full min-h-[420px] flex-col overflow-hidden border p-5 sm:p-7 md:p-8 lg:min-h-[460px] lg:p-10"
 					>
-						<div className="pointer-events-none absolute top-[-2rem] right-[-1rem]">
-							<span className="font-display text-foreground/[0.025] text-[12rem] leading-none font-semibold tracking-[-0.1em]">
+						<div className="pointer-events-none absolute -top-6 -right-2 select-none sm:-top-8 sm:-right-4">
+							<span className="font-display text-foreground/[0.025] text-[7rem] leading-none font-semibold tracking-[-0.1em] sm:text-[10rem] lg:text-[12rem]">
 								{String(activeIndex + 1).padStart(2, "0")}
 							</span>
 						</div>
 
-						<div className="relative flex h-full flex-col">
-							<div className="flex items-start justify-between">
-								<div className="flex items-center gap-3">
-									<div className="border-border bg-background flex size-10 items-center justify-center border">
+						<div className="relative flex min-h-0 flex-1 flex-col justify-between">
+							{/* Top */}
+							<div className="flex min-w-0 items-start justify-between gap-4">
+								<div className="flex min-w-0 items-center gap-3">
+									<div className="border-border/80 bg-background/70 flex size-10 shrink-0 items-center justify-center rounded-md border sm:size-11">
 										<ActiveIcon className="text-primary-500 size-4" />
 									</div>
 
-									<div>
-										<p className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.16em]">
+									<div className="min-w-0">
+										<p className="text-primary-500 truncate font-mono text-[8px] font-semibold tracking-[0.16em] uppercase sm:text-[9px]">
 											{active.id}
 										</p>
 
-										<p className="text-muted mt-1 font-mono text-[7px] tracking-[0.14em] uppercase">
+										<p className="text-muted mt-1 truncate font-mono text-[6px] tracking-[0.14em] uppercase sm:text-[7px]">
 											Selected challenge
 										</p>
 									</div>
 								</div>
 
-								<Sparkles className="text-primary-500/50 size-4" />
+								<Sparkles className="text-primary-500/40 size-4 shrink-0" />
 							</div>
 
-							<div className="mt-auto pt-20">
-								<p className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
+							{/* Bottom content */}
+							<div className="mt-12 sm:mt-16">
+								<p className="text-primary-500/70 font-mono text-[7px] font-medium tracking-[0.16em] uppercase sm:text-[8px]">
 									{active.domain}
 								</p>
 
-								<h3 className="font-display text-foreground mt-3 max-w-xl text-2xl leading-[0.95] font-semibold tracking-[-0.04em] sm:text-3xl lg:text-4xl">
+								<h3 className="font-display text-foreground mt-2 max-w-2xl text-[1.6rem] leading-[0.98] font-semibold tracking-[-0.045em] break-words sm:mt-3 sm:text-3xl md:text-[2.1rem] lg:text-4xl">
 									{active.title}
 								</h3>
 
-								<div className="mt-6 flex items-center gap-3">
-									<span className="bg-primary-500 size-1.5 rounded-full" />
+								<div className="mt-5 flex min-w-0 items-start gap-3 sm:mt-6 sm:items-center">
+									<span className="bg-primary-500 mt-1.5 size-1.5 shrink-0 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.45)] sm:mt-0" />
 
-									<p className="text-muted max-w-md text-xs leading-5">
+									<p className="text-muted max-w-lg text-[11px] leading-relaxed sm:text-xs">
 										{active.ministry}
 									</p>
 								</div>
-							</div>
 
-							<div className="border-border mt-7 flex items-center justify-between border-t pt-5">
-								<span className="text-muted font-mono text-[7px] tracking-[0.14em] uppercase">
-									Problem {String(activeIndex + 1).padStart(2, "0")} / 08
-								</span>
+								<div className="border-border/70 mt-8 border-t pt-4 sm:mt-10 sm:pt-5">
+									<div className="flex items-center justify-between gap-4">
+										<span className="text-muted font-mono text-[7px] tracking-[0.14em] uppercase sm:text-[8px] sm:tracking-[0.16em]">
+											Problem {String(activeIndex + 1).padStart(2, "0")} / 08
+										</span>
 
-								<button
-									type="button"
-									className="text-primary-500 hover:text-primary-400 group inline-flex cursor-pointer items-center gap-2 text-[9px] font-semibold transition-colors"
-								>
-									View challenge
-									<ArrowUpRight className="size-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-								</button>
+										<span className="text-primary-500/40 font-mono text-[7px] tracking-[0.14em] uppercase sm:text-[8px]">
+											CodeX Club
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</motion.div>
 
-					<div className="border-border border-x border-b lg:border-b-0 lg:border-l-0">
-						<div className="grid sm:grid-cols-2">
+					<div className="overflow-hidden">
+						<div className="grid grid-cols-2 md:grid-cols-2">
 							{problems.map((problem, index) => {
 								const Icon = problem.icon;
 								const isActive = index === activeIndex;
@@ -254,21 +254,21 @@ function Problems() {
 										}
 										viewport={{ once: true }}
 										transition={{
-											duration: 0.4,
-											delay: index * 0.04,
+											duration: 0.35,
+											delay: index * 0.03,
 										}}
 										className={[
-											"group border-border relative min-h-[135px] cursor-pointer border-t p-5 text-left transition-all duration-300",
-											index % 2 === 0 ? "sm:border-r" : "",
+											"group border-border relative flex min-w-0 cursor-pointer flex-col border-t p-4 text-left transition-all duration-300 sm:min-h-[135px] sm:p-5 md:min-h-[145px] md:p-5",
+											index % 2 === 0 ? "border-r" : "",
 											isActive
 												? "bg-primary-500/[0.045]"
 												: "hover:bg-surface-raised/50",
 										].join(" ")}
 									>
-										<div className="flex items-start justify-between">
+										<div className="flex min-w-0 items-start justify-between gap-2">
 											<div
 												className={[
-													"flex size-8 items-center justify-center border transition-colors",
+													"flex size-7 shrink-0 items-center justify-center border transition-colors sm:size-8",
 													isActive
 														? "border-primary-500/40 bg-primary-500/10"
 														: "border-border",
@@ -276,7 +276,7 @@ function Problems() {
 											>
 												<Icon
 													className={[
-														"size-3.5",
+														"size-3 sm:size-3.5",
 														isActive
 															? "text-primary-500"
 															: "text-muted",
@@ -286,7 +286,7 @@ function Problems() {
 
 											<span
 												className={[
-													"font-mono text-[8px] font-semibold",
+													"shrink-0 font-mono text-[7px] font-semibold sm:text-[8px]",
 													isActive ? "text-primary-500" : "text-muted",
 												].join(" ")}
 											>
@@ -294,10 +294,10 @@ function Problems() {
 											</span>
 										</div>
 
-										<div className="mt-5">
+										<div className="mt-4 min-w-0 sm:mt-5">
 											<p
 												className={[
-													"text-xs font-medium transition-colors",
+													"truncate text-[11px] font-medium sm:text-xs",
 													isActive
 														? "text-foreground"
 														: "text-muted group-hover:text-foreground",
@@ -306,7 +306,7 @@ function Problems() {
 												{problem.short}
 											</p>
 
-											<p className="text-muted mt-1 font-mono text-[7px] tracking-[0.1em] uppercase">
+											<p className="text-muted mt-1 truncate font-mono text-[6px] tracking-[0.08em] uppercase sm:text-[7px] sm:tracking-[0.1em]">
 												{problem.domain}
 											</p>
 										</div>
@@ -324,25 +324,26 @@ function Problems() {
 					</div>
 				</div>
 
-				<div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-					<div className="flex items-center gap-3">
-						<span className="text-primary-500 font-mono text-[9px] font-semibold">
+				<div className="border-border mt-6 flex flex-col gap-4 border-t pt-4 sm:mt-7 sm:flex-row sm:items-center sm:justify-between">
+					<div className="flex min-w-0 items-center gap-3">
+						<span className="text-primary-500 shrink-0 font-mono text-[9px] font-semibold">
 							08
 						</span>
 
-						<span className="bg-border h-px w-8" />
+						<span className="bg-border h-px w-6 shrink-0 sm:w-8" />
 
-						<span className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
+						<span className="text-muted truncate font-mono text-[7px] tracking-[0.12em] uppercase sm:text-[8px] sm:tracking-[0.16em]">
 							Selected SIH challenges
 						</span>
 					</div>
 
 					<a
 						href="#journey"
-						className="text-primary-500 hover:text-primary-400 group inline-flex items-center gap-2 text-[10px] font-semibold transition-colors"
+						className="text-primary-500 hover:text-primary-400 group inline-flex w-fit shrink-0 items-center gap-2 text-[9px] font-semibold transition-colors sm:text-[10px]"
 					>
-						Understand the selection process
-						<ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+						<span>Understand the selection process</span>
+
+						<ArrowUpRight className="size-3 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-3.5" />
 					</a>
 				</div>
 			</div>

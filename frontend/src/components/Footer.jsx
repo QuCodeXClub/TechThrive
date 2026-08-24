@@ -1,4 +1,3 @@
-import { Mail } from "lucide-react";
 import { Link } from "react-router";
 
 import logo from "@/assets/techthrive-logo.svg";
@@ -6,7 +5,7 @@ import logo from "@/assets/techthrive-logo.svg";
 const socialLinks = [
 	{
 		label: "LinkedIn",
-		href: "#",
+		href: "https://linkedin.com/company/qucodex",
 		icon: (
 			<svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true">
 				<path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.03 2.03 0 0 0 3.2 5.03c0 1.12.91 2.02 2.03 2.02s2.02-.9 2.02-2.02A2.03 2.03 0 0 0 5.25 3ZM20.8 13.4c0-3.46-1.84-5.07-4.3-5.07-1.98 0-2.87 1.09-3.36 1.85V8.5H9.76V20h3.38v-5.7c0-1.5.28-2.95 2.14-2.95 1.84 0 1.87 1.72 1.87 3.05V20h3.38l.27-6.6Z" />
@@ -15,7 +14,7 @@ const socialLinks = [
 	},
 	{
 		label: "GitHub",
-		href: "#",
+		href: "https://github.com/QuCodeXClub",
 		icon: (
 			<svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true">
 				<path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.5-1.27-1.22-1.6-1.22-1.6-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.57 1.19 3.2.91.1-.71.38-1.2.7-1.47-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.44.11-2.99 0 0 .95-.3 3.1 1.16a10.74 10.74 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.71.11 2.99.72.79 1.16 1.8 1.16 3.03 0 4.32-2.63 5.28-5.14 5.55.4.35.75 1.04.75 2.1v3.11c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z" />
@@ -24,7 +23,7 @@ const socialLinks = [
 	},
 	{
 		label: "Instagram",
-		href: "#",
+		href: "https://instagram.com/qu_codex",
 		icon: (
 			<svg
 				viewBox="0 0 24 24"
@@ -75,14 +74,6 @@ function Footer() {
 							A developer-focused hackathon built for ambitious minds, real-world
 							problems, and ideas worth shipping.
 						</p>
-
-						<a
-							href="mailto:codex@example.com"
-							className="text-foreground hover:text-primary-500 mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors"
-						>
-							<Mail className="size-4" />
-							codex@example.com
-						</a>
 					</div>
 
 					<div>

@@ -28,7 +28,7 @@ function About() {
 	return (
 		<section
 			id="about"
-			className="bg-background relative overflow-hidden py-14 sm:py-16 lg:py-20"
+			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
 		>
 			<div className="bg-primary-500/[0.025] pointer-events-none absolute top-[-10rem] right-[-16rem] size-[34rem] rounded-full blur-[150px]" />
 

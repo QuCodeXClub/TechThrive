@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
 
 import teamV1_1 from "@/assets/team-v1-1.jpg";
 import teamV1_2 from "@/assets/team-v1-2.jpg";
@@ -173,10 +173,6 @@ function PreviousWinners() {
 															TechThrive Winner
 														</p>
 													</div>
-
-													<div className="flex size-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-md">
-														<ArrowUpRight className="size-4 text-white" />
-													</div>
 												</div>
 											</div>
 										</div>
@@ -207,8 +203,6 @@ function PreviousWinners() {
 																? "Second Place"
 																: "Third Place"}
 														</span>
-
-														<ArrowUpRight className="text-muted size-3.5 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
 													</div>
 												</div>
 											))}
@@ -245,14 +239,6 @@ function PreviousWinners() {
 								</p>
 							</div>
 						</div>
-
-						<a
-							href="#cta"
-							className="text-primary-500 hover:text-primary-400 group inline-flex items-center gap-2 text-[9px] font-semibold tracking-[0.12em] uppercase transition-colors"
-						>
-							Make your mark
-							<ArrowUpRight className="size-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-						</a>
 					</div>
 				</motion.div>
 			</div>

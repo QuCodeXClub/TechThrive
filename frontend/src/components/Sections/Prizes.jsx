@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Award, Check, GraduationCap, Users } from "lucide-react";
+import { Award, Check, GraduationCap, Users } from "lucide-react";
 
 const prizes = [
 	{
@@ -172,10 +172,6 @@ function Prizes() {
 									<span className="text-muted font-mono text-[8px] tracking-[0.15em] uppercase sm:hidden">
 										01 / 03
 									</span>
-
-									<div className="border-border group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-primary-foreground flex size-10 items-center justify-center border transition-all duration-300">
-										<ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-									</div>
 								</div>
 							</div>
 
