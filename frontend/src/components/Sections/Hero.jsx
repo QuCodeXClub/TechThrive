@@ -6,6 +6,7 @@ import HeroImage from "@/assets/hero-image.jpeg";
 import SIHLogo from "@/assets/sih-logo.jpeg";
 import SIHComplete from "@/assets/sih.jpeg";
 import QuantumLogo from "@/assets/university-logo.webp";
+import UnstopLogo from "@/assets/unstop-logo.svg";
 
 function Hero() {
 	const shouldReduceMotion = useReducedMotion();
@@ -58,8 +59,19 @@ function Hero() {
 							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
 								<img
 									src={SIHLogo}
-									alt="CodeX Club"
+									alt="SIH Logo"
 									className="z-20 h-6 w-auto rounded"
+								/>
+							</div>
+
+							<div className="bg-border h-5 w-px" />
+
+							<div className="border-border bg-surface-raised text-muted flex h-10 items-center rounded-md border px-1 text-sm">
+								Powered by
+								<img
+									src={UnstopLogo}
+									alt="Unstop Logo"
+									className="z-20 ml-1 h-6 w-auto rounded"
 								/>
 							</div>
 						</motion.div>
@@ -118,7 +130,7 @@ function Hero() {
 						<img
 							src={SIHComplete}
 							alt="Smart India Hackathon 2026"
-							className="z-20 my-4 h-16 w-auto rounded-xl"
+							className="z-20 my-4 h-12 w-auto rounded-xl sm:h-16"
 						/>
 
 						<motion.div
