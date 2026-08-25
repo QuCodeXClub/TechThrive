@@ -1,35 +1,41 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Award, Check, GraduationCap, Users } from "lucide-react";
+import { Award, Check, GraduationCap, Medal, Trophy } from "lucide-react";
 
 const prizes = [
 	{
 		number: "01",
-		title: "Winning Team",
+		title: "1st Place",
 		kicker: "TOP HONOURS",
 		description:
-			"The strongest-performing team will be considered for the university's SIH 2026 nomination and further mentorship.",
-		benefits: ["SIH Nomination Pathway", "Faculty Mentorship"],
-		icon: Award,
+			"The top-performing team will be recognized with premium sponsor rewards and the strongest pathway toward the university's SIH 2026 nomination.",
+		benefits: [
+			"2-Year CodeCrafters VIP Membership",
+			"Trophy",
+			"Certificate",
+			"SIH Nomination Pathway",
+			"Faculty Mentorship",
+		],
+		icon: Trophy,
 		featured: true,
 	},
 	{
 		number: "02",
-		title: "Selected Teams",
-		kicker: "ROUND 02",
+		title: "2nd Place",
+		kicker: "RUNNER-UP",
 		description:
-			"Teams selected through Round 1 advance to the 7-hour TechThrive Grand Finale.",
-		benefits: ["Round 2 Qualification", "Faculty Guidance"],
-		icon: Users,
+			"The second-place team earns a year of CodeCrafters VIP Membership along with official recognition for their achievement.",
+		benefits: ["1-Year CodeCrafters VIP Membership", "Trophy", "Certificate"],
+		icon: Trophy,
 		featured: false,
 	},
 	{
 		number: "03",
-		title: "Every Participant",
-		kicker: "BUILD & LEARN",
+		title: "3rd Place",
+		kicker: "THIRD PLACE",
 		description:
-			"Every participant gains exposure to real problem statements, technical evaluation and collaborative problem solving.",
-		benefits: ["Participation Opportunity", "Technical Exposure"],
-		icon: GraduationCap,
+			"The third-place team receives sponsor-backed learning benefits and recognition for their performance.",
+		benefits: ["6-Month CodeCrafters VIP Membership", "Medal", "Certificate"],
+		icon: Medal,
 		featured: false,
 	},
 ];
@@ -69,7 +75,7 @@ function Prizes() {
 								<span className="bg-primary-500 size-1.5 rounded-full" />
 
 								<span className="text-primary-500 font-mono text-[9px] font-semibold tracking-[0.2em] uppercase">
-									05 / Prizes & Recognition
+									05 / Rewards & Prizes
 								</span>
 							</div>
 
@@ -82,13 +88,13 @@ function Prizes() {
 
 						<div className="lg:pb-1">
 							<p className="text-muted max-w-sm text-sm leading-6">
-								TechThrive rewards progress at every stage — from submission and
-								qualification to building something strong enough to move forward.
+								TechThrive 2026 rewards the top-performing teams with CodeCrafters
+								VIP Memberships, trophies, medals and certificates.
 							</p>
 
 							<div className="mt-4 flex items-center gap-3">
 								<span className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.18em] uppercase">
-									Build · Prove · Advance
+									Build · Prove · Earn
 								</span>
 
 								<span className="bg-border h-px w-8" />
@@ -105,22 +111,24 @@ function Prizes() {
 					<div className="border-border hidden border-r pr-8 lg:block">
 						<div className="sticky top-24">
 							<p className="text-muted font-mono text-[8px] tracking-[0.18em] uppercase">
-								The outcome
+								The rewards
 							</p>
 
 							<p className="text-muted mt-3 max-w-[150px] text-xs leading-5">
-								Every stage gives your team something worth taking forward.
+								From VIP memberships to trophies, medals and certificates, every
+								achievement gets recognized.
 							</p>
 
 							<div className="bg-primary-500 mt-8 h-px w-10" />
 
 							<p className="text-muted mt-4 font-mono text-[8px] tracking-[0.14em] uppercase">
-								03 levels
+								03 winning places
 							</p>
 						</div>
 					</div>
 
 					<div className="lg:pl-10 xl:pl-14">
+						{/* 1st Place */}
 						<motion.article
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
 							whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -138,30 +146,34 @@ function Prizes() {
 								</div>
 
 								<div>
-									<div className="flex items-center gap-2">
-										<Award className="text-primary-500 size-4" />
+									<div className="flex flex-wrap items-center gap-2">
+										<Trophy className="text-primary-500 size-4" />
 
 										<span className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.18em] uppercase">
 											Top Honours
 										</span>
+
+										<span className="bg-primary-500/10 text-primary-500 ml-1 inline-flex items-center gap-1.5 px-2 py-1 font-mono text-[7px] font-semibold tracking-[0.14em] uppercase">
+											<Award className="size-3" />
+											Winning Team
+										</span>
 									</div>
 
 									<h3 className="font-display text-foreground mt-3 max-w-xl text-3xl leading-[0.95] font-semibold tracking-[-0.04em] sm:text-4xl">
-										Winning Team
+										1st Place
 									</h3>
 
 									<p className="text-muted mt-4 max-w-xl text-sm leading-6">
 										{prizes[0].description}
 									</p>
 
-									<div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+									<div className="mt-6 grid gap-3 sm:grid-cols-2">
 										{prizes[0].benefits.map((benefit) => (
 											<div
 												key={benefit}
 												className="text-foreground flex items-center gap-2 text-xs"
 											>
-												<Check className="text-primary-500 size-3.5" />
-
+												<Check className="text-primary-500 size-3.5 shrink-0" />
 												{benefit}
 											</div>
 										))}
@@ -178,6 +190,7 @@ function Prizes() {
 							<div className="bg-primary-500 absolute bottom-0 left-0 h-px w-0 transition-all duration-500 group-hover:w-full" />
 						</motion.article>
 
+						{/* 2nd & 3rd Place */}
 						<div className="grid sm:grid-cols-2">
 							{prizes.slice(1).map((prize, index) => {
 								const Icon = prize.icon;
@@ -242,7 +255,6 @@ function Prizes() {
 													className="text-muted flex items-center gap-2 text-xs"
 												>
 													<Check className="text-primary-500 size-3.5" />
-
 													{benefit}
 												</div>
 											))}
@@ -263,9 +275,16 @@ function Prizes() {
 					transition={{ duration: 0.5 }}
 					className="border-border mt-6 flex flex-col gap-3 border-t pt-5 sm:flex-row sm:items-center sm:justify-between"
 				>
-					<p className="text-muted text-xs">
-						Recognition is not just a reward — it is the next opportunity.
-					</p>
+					<div className="flex items-center gap-3">
+						<GraduationCap className="text-primary-500 size-4" />
+
+						<p className="text-muted text-xs">
+							<strong className="text-foreground font-medium">
+								All participants receive certificates.
+							</strong>{" "}
+							Your participation is part of the achievement.
+						</p>
+					</div>
 
 					<span className="text-muted font-mono text-[8px] tracking-[0.16em] uppercase">
 						TechThrive 2026
