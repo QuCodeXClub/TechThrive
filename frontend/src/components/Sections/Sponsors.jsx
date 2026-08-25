@@ -3,6 +3,7 @@ import { ArrowUpRight, Handshake } from "lucide-react";
 
 import CodeCraftersDarkLogo from "@/assets/sponsors/codecrafters-logo-dark.svg";
 import CodeCraftersLightLogo from "@/assets/sponsors/codecrafters-logo-light.svg";
+import UnstopLogo from "@/assets/unstop-logo.svg";
 
 const sponsors = [
 	{
@@ -13,6 +14,15 @@ const sponsors = [
 		lightLogo: CodeCraftersLightLogo,
 		darkLogo: CodeCraftersDarkLogo,
 		website: "https://codecrafters.io",
+	},
+	{
+		number: "02",
+		name: "Unstop",
+		description:
+			"Unstop is the platform powering TechThrive 2026, where participants can discover the hackathon, register their teams, and take part in the competition.",
+		lightLogo: UnstopLogo,
+		darkLogo: UnstopLogo,
+		website: "https://unstop.com",
 	},
 ];
 
@@ -112,8 +122,6 @@ function Sponsors() {
 								"focus-visible:bg-surface-muted/40",
 								"focus-visible:outline-none",
 								"lg:grid-cols-[0.3fr_0.7fr_1fr]",
-								index === 1 ? "lg:ml-[6%]" : "",
-								index === 2 ? "lg:ml-[12%]" : "",
 							].join(" ")}
 						>
 							<div className="border-border flex items-center gap-3 p-6 lg:border-r lg:py-8">
