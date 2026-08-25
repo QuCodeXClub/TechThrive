@@ -40,40 +40,65 @@ function Hero() {
 							transition={{ duration: 0.6 }}
 							className="mb-8 flex items-center gap-3"
 						>
-							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
+							<a
+								href="https://quantumuniversity.edu.in"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Quantum University"
+								className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1 transition-opacity hover:opacity-80"
+							>
 								<img
 									alt="Quantum University"
 									className="z-20 h-6 w-auto"
 									src={QuantumLogo}
 								/>
-							</div>
+							</a>
 
 							<div className="bg-border h-5 w-px" />
 
-							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
+							<a
+								href="https://qucodex.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="CodeX Club"
+								className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1 transition-opacity hover:opacity-80"
+							>
 								<img src={CodeXLogo} alt="CodeX Club" className="z-20 h-6 w-auto" />
-							</div>
+							</a>
 
 							<div className="bg-border h-5 w-px" />
 
-							<div className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1">
+							<a
+								href="https://www.sih.gov.in"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Smart India Hackathon"
+								className="border-border bg-surface-raised flex h-10 items-center rounded-md border px-1 transition-opacity hover:opacity-80"
+							>
 								<img
 									src={SIHLogo}
 									alt="SIH Logo"
 									className="z-20 h-6 w-auto rounded"
 								/>
-							</div>
+							</a>
 
 							<div className="bg-border h-5 w-px" />
 
-							<div className="border-border bg-surface-raised text-muted flex h-10 items-center rounded-md border px-1 text-sm">
-								Powered by
+							<a
+								href="https://unstop.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Unstop"
+								className="border-border bg-surface-raised text-muted flex h-10 items-center rounded-md border px-1 text-sm transition-opacity hover:opacity-80"
+							>
+								<span>Powered by</span>
+
 								<img
 									src={UnstopLogo}
 									alt="Unstop Logo"
 									className="z-20 ml-1 h-6 w-auto rounded"
 								/>
-							</div>
+							</a>
 						</motion.div>
 
 						<motion.div
@@ -121,7 +146,7 @@ function Hero() {
 						>
 							TechThrive 2026 is CodeX Club's internal hackathon at Quantum
 							University, conducted under the supervision of the CSE & CA Departments
-							to identify, evaluate and mentor student teams for the
+							to identify, evaluate and mentor student teams for the{" "}
 							<span className="text-foreground font-medium">
 								Smart India Hackathon 2026.
 							</span>
