@@ -38,7 +38,7 @@ function About() {
 						<span className="bg-primary-500 size-1.5 rounded-full" />
 
 						<span className="text-primary-500 font-mono text-[9px] font-semibold tracking-[0.2em] uppercase">
-							01 / About
+							02 / About
 						</span>
 					</div>
 

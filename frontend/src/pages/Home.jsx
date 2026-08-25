@@ -26,8 +26,8 @@ function Home() {
 
 			<div className="relative z-10">
 				<Hero />
-				<About />
 				<Journey />
+				<About />
 				<Themes />
 				<Sponsors />
 				<PreviousWinners />

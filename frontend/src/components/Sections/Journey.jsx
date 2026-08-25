@@ -89,7 +89,7 @@ function Journey() {
 							<span className="bg-primary-500 size-1.5 shrink-0 rounded-full" />
 
 							<span className="text-primary-500 min-w-0 font-mono text-[9px] font-semibold tracking-[0.2em] uppercase">
-								02 / Journey
+								01 / Journey
 							</span>
 						</div>
 

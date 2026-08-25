@@ -7,8 +7,8 @@ import logo from "@/assets/techthrive-logo.svg";
 import { getTheme, setTheme } from "@/utils/storage";
 
 const navigation = [
-	{ label: "About", href: "#about" },
 	{ label: "Journey", href: "#journey" },
+	{ label: "About", href: "#about" },
 	{ label: "Themes", href: "#themes" },
 	{ label: "Sponsors", href: "#sponsors" },
 	{ label: "Previous Winners", href: "#previous-winners" },
