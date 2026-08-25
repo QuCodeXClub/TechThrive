@@ -348,13 +348,31 @@ function Journey() {
 
 														<h3
 															className={[
-																"font-display mt-2 text-lg leading-none font-semibold tracking-[-0.035em] transition-colors sm:text-xl lg:text-2xl",
+																"font-display mt-2 flex flex-wrap items-center gap-2 text-lg leading-none font-semibold tracking-[-0.035em] transition-colors sm:text-xl lg:text-2xl",
 																isOpen
 																	? "text-foreground"
 																	: "text-muted group-hover:text-foreground",
 															].join(" ")}
 														>
-															{stage.title}
+															{stage.number === "05" ||
+															stage.number === "07" ? (
+																<>
+																	<span className="bg-primary-500 text-background inline-flex items-center px-2 py-1 font-mono text-[11px] font-bold tracking-[0.12em] uppercase sm:text-[12px]">
+																		Round{" "}
+																		{stage.number === "05"
+																			? "01"
+																			: "02"}
+																	</span>
+
+																	<span>
+																		{stage.number === "05"
+																			? ": SIH Qualification Round"
+																			: ": Grand Finale"}
+																	</span>
+																</>
+															) : (
+																stage.title
+															)}
 														</h3>
 
 														<p className="text-primary-500 mt-2 font-mono text-[8px] font-semibold tracking-[0.12em] uppercase">
