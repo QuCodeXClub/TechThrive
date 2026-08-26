@@ -76,29 +76,66 @@ function Footer() {
 						</p>
 					</div>
 
-					<div>
-						<p className="text-foreground font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
-							Connect
-						</p>
+					<div className="grid gap-10 sm:grid-cols-2">
+						<div>
+							<p className="text-foreground font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
+								Connect
+							</p>
 
-						<div className="mt-5 flex flex-wrap gap-2">
-							{socialLinks.map((social) => (
-								<a
-									key={social.label}
-									href={social.href}
-									aria-label={social.label}
-									target="_blank"
-									rel="noreferrer"
-									className="border-border bg-surface-raised/50 text-muted hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-primary-500 flex size-10 items-center justify-center rounded-lg border transition-all duration-200"
-								>
-									{social.icon}
-								</a>
-							))}
+							<div className="mt-5 flex flex-wrap gap-2">
+								{socialLinks.map((social) => (
+									<a
+										key={social.label}
+										href={social.href}
+										aria-label={social.label}
+										target="_blank"
+										rel="noreferrer"
+										className="border-border bg-surface-raised/50 text-muted hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-primary-500 flex size-10 items-center justify-center rounded-lg border transition-all duration-200"
+									>
+										{social.icon}
+									</a>
+								))}
+							</div>
+
+							<p className="text-muted mt-5 max-w-xs text-xs leading-5">
+								Follow CodeX Club for updates, announcements, and future events.
+							</p>
 						</div>
 
-						<p className="text-muted mt-5 max-w-xs text-xs leading-5">
-							Follow CodeX Club for updates, announcements, and future events.
-						</p>
+						<div>
+							<p className="text-foreground font-mono text-[10px] font-semibold tracking-[0.2em] uppercase">
+								Legal & Compliance
+							</p>
+
+							<div className="mt-5 flex flex-col items-start gap-3">
+								<a
+									href="https://qucodex.com/privacy-policy"
+									target="_blank"
+									rel="noreferrer"
+									className="text-muted hover:text-primary-500 text-xs transition-colors"
+								>
+									Privacy Policy
+								</a>
+
+								<a
+									href="https://qucodex.com/terms-conditions"
+									target="_blank"
+									rel="noreferrer"
+									className="text-muted hover:text-primary-500 text-xs transition-colors"
+								>
+									Terms & Conditions
+								</a>
+
+								<a
+									href="https://qucodex.com/accessibility"
+									target="_blank"
+									rel="noreferrer"
+									className="text-muted hover:text-primary-500 text-xs transition-colors"
+								>
+									Accessibility
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 
