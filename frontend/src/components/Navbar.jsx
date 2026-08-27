@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import logo from "@/assets/techthrive-logo.svg";
 import { getTheme, setTheme } from "@/utils/storage";
@@ -11,7 +11,7 @@ const navigation = [
 	{ label: "About", href: "#about" },
 	{ label: "Themes", href: "#themes" },
 	{ label: "Sponsors", href: "#sponsors" },
-	{ label: "Previous Winners", href: "#previous-winners" },
+	{ label: "Winners", href: "#previous-winners" },
 	{ label: "Prizes", href: "#prizes" },
 	{ label: "FAQ", href: "#faq" },
 ];
@@ -19,6 +19,9 @@ const navigation = [
 const REGISTER_URL = "https://unstop.com/p/techthrive-2026-quantum-university-roorkee-1740052";
 
 function Navbar() {
+	const location = useLocation();
+	const isHomePage = location.pathname === "/";
+
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
@@ -77,6 +80,11 @@ function Navbar() {
 	}, [mobileOpen]);
 
 	useEffect(() => {
+		if (!isHomePage) {
+			setActiveSection("");
+			return;
+		}
+
 		const updateActiveSection = () => {
 			const offset = window.scrollY + window.innerHeight * 0.28;
 
@@ -110,7 +118,11 @@ function Navbar() {
 			window.removeEventListener("scroll", updateActiveSection);
 			window.removeEventListener("resize", updateActiveSection);
 		};
-	}, []);
+	}, [isHomePage]);
+
+	useEffect(() => {
+		setMobileOpen(false);
+	}, [location.pathname]);
 
 	useEffect(() => {
 		const handleKeyDown = (event) => {
@@ -169,14 +181,14 @@ function Navbar() {
 						exit={shouldReduceMotion ? {} : { opacity: 0 }}
 						transition={{ duration: 0.2 }}
 						onClick={closeMobileMenu}
-						className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden dark:bg-black/50"
+						className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm min-[1200px]:hidden dark:bg-black/50"
 					/>
 				)}
 			</AnimatePresence>
 
 			<motion.header
-				initial={shouldReduceMotion ? false : { opacity: 0 }}
-				animate={shouldReduceMotion ? {} : { opacity: 1 }}
+				initial={shouldReduceMotion ? false : { opacity: 0, y: -10 }}
+				animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
 				transition={{
 					duration: 0.35,
 					ease: "easeOut",
@@ -235,42 +247,63 @@ function Navbar() {
 							</div>
 						</Link>
 
-						<nav className="absolute left-1/2 hidden -translate-x-1/2 lg:block">
-							<div className="border-border/50 bg-surface-raised/60 flex items-center gap-0.5 rounded-xl border p-1">
-								{navigation.map((item) => {
-									const isActive = activeSection === item.href;
+						{isHomePage && (
+							<nav className="absolute left-1/2 hidden -translate-x-1/2 min-[1200px]:block">
+								<div className="border-border/50 bg-surface-raised/60 flex items-center gap-0.5 rounded-xl border p-1">
+									{navigation.map((item) => {
+										const isActive = activeSection === item.href;
 
-									return (
-										<a
-											key={item.href}
-											href={item.href}
-											onClick={(event) => handleNavigation(event, item.href)}
-											className={`relative rounded-lg px-3 py-2 text-xs font-medium transition-colors xl:px-3.5 xl:text-sm ${
-												isActive
-													? "text-primary-500"
-													: "text-muted hover:text-foreground"
-											}`}
-										>
-											{isActive && (
-												<motion.span
-													layoutId="navbar-active"
-													transition={{
-														type: "spring",
-														stiffness: 420,
-														damping: 32,
-													}}
-													className="bg-primary-500/10 absolute inset-0 rounded-lg"
-												/>
-											)}
+										return (
+											<a
+												key={item.href}
+												href={item.href}
+												onClick={(event) =>
+													handleNavigation(event, item.href)
+												}
+												className={`relative rounded-lg px-3 py-2 text-xs font-medium transition-colors xl:px-3.5 xl:text-sm ${
+													isActive
+														? "text-primary-500"
+														: "text-muted hover:text-foreground"
+												}`}
+											>
+												{isActive && (
+													<motion.span
+														layoutId="navbar-active"
+														transition={{
+															type: "spring",
+															stiffness: 420,
+															damping: 32,
+														}}
+														className="bg-primary-500/10 absolute inset-0 rounded-lg"
+													/>
+												)}
 
-											<span className="relative z-10">{item.label}</span>
-										</a>
-									);
-								})}
-							</div>
-						</nav>
+												<span className="relative z-10">{item.label}</span>
+											</a>
+										);
+									})}
+								</div>
+							</nav>
+						)}
 
 						<div className="ml-auto flex items-center gap-2">
+							<motion.div
+								whileHover={shouldReduceMotion ? {} : { y: -1 }}
+								whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
+								className="hidden md:block"
+							>
+								<Link
+									to="/developers"
+									className="border-border/60 bg-surface-raised/40 text-muted hover:border-primary-500/40 hover:bg-primary-500/5 hover:text-foreground group flex h-10 items-center gap-2 rounded-lg border px-3 transition-all"
+								>
+									<span className="text-primary-500 bg-primary-500/10 flex size-5 items-center justify-center rounded-md font-mono text-[10px] font-bold">
+										{"</>"}
+									</span>
+
+									<span className="text-xs font-medium">Developers</span>
+								</Link>
+							</motion.div>
+
 							<button
 								type="button"
 								onClick={toggleTheme}
@@ -309,7 +342,9 @@ function Navbar() {
 														scale: 0.7,
 													}
 										}
-										transition={{ duration: 0.18 }}
+										transition={{
+											duration: 0.18,
+										}}
 									>
 										{darkMode ? (
 											<Sun className="size-4" />
@@ -344,7 +379,7 @@ function Navbar() {
 								onClick={() => setMobileOpen((current) => !current)}
 								aria-label={mobileOpen ? "Close menu" : "Open menu"}
 								aria-expanded={mobileOpen}
-								className="border-border/70 bg-surface-raised/60 text-foreground flex size-9 items-center justify-center rounded-lg border transition-colors sm:size-10 lg:hidden"
+								className="border-border/70 bg-surface-raised/60 text-foreground flex size-9 items-center justify-center rounded-lg border transition-colors min-[1200px]:hidden sm:size-10"
 							>
 								<AnimatePresence mode="wait" initial={false}>
 									<motion.span
@@ -376,7 +411,9 @@ function Navbar() {
 														scale: 0.8,
 													}
 										}
-										transition={{ duration: 0.16 }}
+										transition={{
+											duration: 0.16,
+										}}
 									>
 										{mobileOpen ? (
 											<X className="size-5" />
@@ -392,65 +429,87 @@ function Navbar() {
 					<AnimatePresence initial={false}>
 						{mobileOpen && (
 							<motion.div
-								initial={shouldReduceMotion ? false : { opacity: 0, height: 0 }}
-								animate={shouldReduceMotion ? {} : { opacity: 1, height: "auto" }}
-								exit={shouldReduceMotion ? {} : { opacity: 0, height: 0 }}
+								initial={
+									shouldReduceMotion
+										? false
+										: {
+												opacity: 0,
+												height: 0,
+											}
+								}
+								animate={
+									shouldReduceMotion
+										? {}
+										: {
+												opacity: 1,
+												height: "auto",
+											}
+								}
+								exit={
+									shouldReduceMotion
+										? {}
+										: {
+												opacity: 0,
+												height: 0,
+											}
+								}
 								transition={{
 									duration: 0.25,
 									ease: [0.22, 1, 0.36, 1],
 								}}
-								className="relative z-10 overflow-hidden lg:hidden"
+								className="relative z-10 overflow-hidden min-[1200px]:hidden"
 							>
 								<div className="border-border/50 border-t px-3 pt-2 pb-3">
 									<nav className="flex flex-col gap-0.5">
-										{navigation.map((item, index) => {
-											const isActive = activeSection === item.href;
+										{isHomePage &&
+											navigation.map((item, index) => {
+												const isActive = activeSection === item.href;
 
-											return (
-												<motion.a
-													key={item.href}
-													href={item.href}
-													onClick={(event) =>
-														handleNavigation(event, item.href)
-													}
-													initial={
-														shouldReduceMotion
-															? false
-															: {
-																	opacity: 0,
-																	x: -8,
-																}
-													}
-													animate={
-														shouldReduceMotion
-															? {}
-															: {
-																	opacity: 1,
-																	x: 0,
-																}
-													}
-													transition={{
-														delay: index * 0.035,
-														duration: 0.2,
-													}}
-													className={`flex items-center justify-between rounded-lg px-3 py-3 text-sm font-medium transition-colors ${
-														isActive
-															? "bg-primary-500/10 text-primary-500"
-															: "text-muted hover:bg-surface-raised hover:text-foreground"
-													}`}
-												>
-													<span className="flex items-center gap-3">
-														<span className="text-primary-500 w-5 font-mono text-[9px]">
-															{String(index + 1).padStart(2, "0")}
+												return (
+													<motion.a
+														key={item.href}
+														href={item.href}
+														onClick={(event) =>
+															handleNavigation(event, item.href)
+														}
+														initial={
+															shouldReduceMotion
+																? false
+																: {
+																		opacity: 0,
+																		x: -8,
+																	}
+														}
+														animate={
+															shouldReduceMotion
+																? {}
+																: {
+																		opacity: 1,
+																		x: 0,
+																	}
+														}
+														transition={{
+															delay: index * 0.035,
+															duration: 0.2,
+														}}
+														className={`flex items-center justify-between rounded-lg px-3 py-3 text-sm font-medium transition-colors ${
+															isActive
+																? "bg-primary-500/10 text-primary-500"
+																: "text-muted hover:bg-surface-raised hover:text-foreground"
+														}`}
+													>
+														<span className="flex items-center gap-3">
+															<span className="text-primary-500 w-5 font-mono text-[9px]">
+																{String(index + 1).padStart(2, "0")}
+															</span>
+
+															{item.label}
 														</span>
 
-														{item.label}
-													</span>
-
-													<ArrowUpRight className="size-4" />
-												</motion.a>
-											);
-										})}
+														<ArrowUpRight className="size-4" />
+													</motion.a>
+												);
+											})}
 
 										<motion.a
 											target="_blank"
@@ -458,18 +517,69 @@ function Navbar() {
 											href={REGISTER_URL}
 											onClick={closeMobileMenu}
 											initial={
-												shouldReduceMotion ? false : { opacity: 0, y: 8 }
+												shouldReduceMotion
+													? false
+													: {
+															opacity: 0,
+															y: 8,
+														}
 											}
-											animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+											animate={
+												shouldReduceMotion
+													? {}
+													: {
+															opacity: 1,
+															y: 0,
+														}
+											}
 											transition={{
-												delay: 0.2,
+												delay: isHomePage ? 0.2 : 0,
 												duration: 0.25,
 											}}
-											className="bg-primary-500 mt-2 flex items-center justify-center gap-2 rounded-lg px-4 py-3.5 text-sm font-semibold text-white"
+											className="bg-primary-500 hover:bg-primary-600 mt-2 flex items-center justify-center gap-2 rounded-lg px-4 py-3.5 text-sm font-semibold text-white transition-colors"
 										>
 											Register for TechThrive
 											<ArrowUpRight className="size-4" />
 										</motion.a>
+
+										<motion.div
+											initial={
+												shouldReduceMotion
+													? false
+													: {
+															opacity: 0,
+															y: 6,
+														}
+											}
+											animate={
+												shouldReduceMotion
+													? {}
+													: {
+															opacity: 1,
+															y: 0,
+														}
+											}
+											transition={{
+												delay: isHomePage ? 0.25 : 0.05,
+												duration: 0.2,
+											}}
+										>
+											<Link
+												to="/developers"
+												onClick={closeMobileMenu}
+												className="border-border/60 bg-surface-raised/40 text-muted hover:border-primary-500/40 hover:bg-primary-500/5 hover:text-foreground group mt-2 flex h-11 items-center justify-center gap-2 rounded-lg border transition-all"
+											>
+												<span className="text-primary-500 bg-primary-500/10 flex size-5 items-center justify-center rounded-md font-mono text-[10px] font-bold">
+													{"</>"}
+												</span>
+
+												<span className="text-xs font-medium">
+													Meet the Developers
+												</span>
+
+												<ArrowUpRight className="size-3.5 opacity-60 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+											</Link>
+										</motion.div>
 									</nav>
 								</div>
 							</motion.div>
