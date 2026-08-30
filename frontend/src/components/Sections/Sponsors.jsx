@@ -3,6 +3,9 @@ import { ArrowUpRight, Handshake } from "lucide-react";
 
 import CodeCraftersDarkLogo from "@/assets/sponsors/codecrafters-logo-dark.svg";
 import CodeCraftersLightLogo from "@/assets/sponsors/codecrafters-logo-light.svg";
+import MemCodeLogo from "@/assets/sponsors/memcode-logo.png";
+import OSENDarkLogo from "@/assets/sponsors/osen-logo-dark.png";
+import OSENLightLogo from "@/assets/sponsors/osen-logo-light.png";
 import UnstopLogo from "@/assets/unstop-logo.svg";
 
 const sponsors = [
@@ -23,6 +26,24 @@ const sponsors = [
 		lightLogo: UnstopLogo,
 		darkLogo: UnstopLogo,
 		website: "https://unstop.com",
+	},
+	{
+		number: "03",
+		name: "OSEN",
+		description:
+			"OSEN helps student communities run high-quality hackathons with swags, sponsorships, mentors, speakers, promotion, and on-ground execution support.",
+		lightLogo: OSENLightLogo,
+		darkLogo: OSENDarkLogo,
+		website: "https://osen.live",
+	},
+	{
+		number: "04",
+		name: "MemCode",
+		description:
+			"MemCode is an AI memory layer that helps agents, copilots, and AI products retain, retrieve, and manage durable context across sessions.",
+		lightLogo: MemCodeLogo,
+		darkLogo: MemCodeLogo,
+		website: "https://memcode.in",
 	},
 ];
 
