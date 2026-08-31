@@ -158,10 +158,61 @@ function Hero() {
 							className="z-20 my-4 h-12 w-auto rounded-xl sm:h-16"
 						/>
 
+						{/* Quantum University Highlight */}
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: 0.36 }}
+							transition={{ duration: 0.6, delay: 0.34 }}
+							className="border-border mt-8 max-w-2xl border-y py-7 sm:mt-10 sm:py-8"
+						>
+							<div className="flex flex-col gap-7 sm:flex-row sm:items-center sm:gap-8">
+								{/* University Identity */}
+								<div className="flex shrink-0 items-center gap-4 sm:pr-2">
+									<div className="border-border bg-surface-raised flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border p-2.5 shadow-sm sm:h-20 sm:w-20">
+										<img
+											src={QuantumLogo}
+											alt="Quantum University"
+											className="h-full w-full object-contain"
+										/>
+									</div>
+
+									<div>
+										<p className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.2em] uppercase">
+											Proudly hosted at
+										</p>
+
+										<h2 className="text-foreground mt-2 text-3xl leading-[0.9] font-bold tracking-[-0.055em] sm:text-4xl">
+											Quantum
+											<br />
+											University
+										</h2>
+									</div>
+								</div>
+
+								{/* Desktop Divider */}
+								<div className="bg-border hidden h-24 w-px shrink-0 sm:block" />
+
+								{/* Quote */}
+								<div className="border-primary-500/50 border-l-2 pl-5 sm:border-l-0 sm:pl-0">
+									<p className="text-foreground text-sm leading-6 font-medium italic sm:text-base sm:leading-7">
+										“Where ambition meets opportunity, ideas become innovation,
+										and students are empowered to shape the future.”
+									</p>
+
+									<div className="mt-4 flex items-center gap-2">
+										<span className="bg-primary-500 h-px w-6" />
+										<p className="text-primary-500 font-mono text-[8px] font-semibold tracking-[0.16em] uppercase">
+											Quantum University
+										</p>
+									</div>
+								</div>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, delay: 0.42 }}
 							className="border-border mt-8 grid max-w-2xl gap-3 border-y py-4 sm:grid-cols-3 sm:gap-0 sm:py-0"
 						>
 							<div className="sm:py-5 sm:pr-5">
@@ -222,7 +273,7 @@ function Hero() {
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: 0.44 }}
+							transition={{ duration: 0.6, delay: 0.5 }}
 							className="mt-8 flex flex-col gap-3 sm:flex-row"
 						>
 							<motion.a
@@ -248,7 +299,7 @@ function Hero() {
 						<motion.div
 							initial={shouldReduceMotion ? false : { opacity: 0 }}
 							animate={shouldReduceMotion ? {} : { opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.55 }}
+							transition={{ duration: 0.6, delay: 0.6 }}
 							className="mt-6 flex items-center gap-3"
 						>
 							<span className="relative flex size-2">
@@ -287,7 +338,6 @@ function Hero() {
 
 									<div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
 
-									{/* Image label */}
 									<div className="absolute top-4 right-4 left-4 flex items-center justify-between">
 										<span className="rounded-full border border-white/20 bg-black/20 px-3 py-1.5 font-mono text-[8px] tracking-[0.15em] text-white backdrop-blur-md">
 											TECHTHRIVE 2026

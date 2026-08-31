@@ -3,6 +3,7 @@ import { ArrowUpRight, Handshake } from "lucide-react";
 
 import CodeCraftersDarkLogo from "@/assets/sponsors/codecrafters-logo-dark.svg";
 import CodeCraftersLightLogo from "@/assets/sponsors/codecrafters-logo-light.svg";
+import InterviewBuddyLogo from "@/assets/sponsors/interviewbuddy-logo.png";
 import MemCodeLogo from "@/assets/sponsors/memcode-logo.png";
 import OSENDarkLogo from "@/assets/sponsors/osen-logo-dark.png";
 import OSENLightLogo from "@/assets/sponsors/osen-logo-light.png";
@@ -44,6 +45,15 @@ const sponsors = [
 		lightLogo: MemCodeLogo,
 		darkLogo: MemCodeLogo,
 		website: "https://memcode.in",
+	},
+	{
+		number: "05",
+		name: "InterviewBuddy",
+		description:
+			"InterviewBuddy is an interview preparation platform offering 1:1 expert-led mock interviews, AI-powered interview practice, and personalized feedback to help candidates build confidence and succeed in their careers.",
+		lightLogo: InterviewBuddyLogo,
+		darkLogo: InterviewBuddyLogo,
+		website: "https://interviewbuddy.net",
 	},
 ];
 
