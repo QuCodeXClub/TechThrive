@@ -10,13 +10,13 @@ const developers = {
 		role: "Team Lead",
 		tag: "01 / LEAD",
 		description:
-			"Led the complete development of the TechThrive website, bringing together the team's ideas, content and design direction into a polished, responsive and production-ready platform.",
+			"Led and coordinated the TechThrive team throughout the project, helping align ideas, content, and design direction while contributing to the development and delivery of a polished, responsive platform.",
 		contributions: [
-			"Overall website development",
+			"Team coordination and project leadership",
+			"Technical planning and development support",
 			"Frontend architecture and implementation",
-			"Interactive UI and animations",
 			"Responsive design implementation",
-			"Feature integration and refinement",
+			"Feature integration",
 			"Production deployment on AWS Amplify",
 		],
 		github: "https://github.com/siddharthk8",
@@ -32,7 +32,7 @@ const developers = {
 			description:
 				"Contributed to both the visual direction and implementation of TechThrive, helping shape the initial interface and translating parts of the design into the website's codebase.",
 			contributions: [
-				"Initial UI and layout concepts",
+				"UI and layout concepts",
 				"Visual design direction",
 				"Frontend implementation",
 				"UI components and styling",
