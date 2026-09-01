@@ -10,7 +10,7 @@ const developers = {
 		role: "Team Lead",
 		tag: "01 / LEAD",
 		description:
-			"Led and coordinated the TechThrive team throughout the project, helping bring together the team's ideas, content, and design direction while actively contributing to the development and delivery of a polished, responsive platform.",
+			"Led and coordinated the TechThrive team throughout the project, helping align ideas, content, and design direction while contributing to the development and delivery of a polished, responsive platform.",
 		contributions: [
 			"Team coordination and project leadership",
 			"Technical planning and development support",
