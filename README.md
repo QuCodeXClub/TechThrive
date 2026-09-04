@@ -150,7 +150,7 @@ Department of CSE & Computer Applications
 Quantum University
 
 * [LinkedIn](https://in.linkedin.com/company/qucodex)
-* [Instagram](https://www.instagram.com/qu_codex/)
+* [Instagram](https://www.instagram.com/qucodex/)
 * [GitHub](https://github.com/QuCodeXClub)
 
 ---

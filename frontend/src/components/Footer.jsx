@@ -23,7 +23,7 @@ const socialLinks = [
 	},
 	{
 		label: "Instagram",
-		href: "https://instagram.com/qu_codex",
+		href: "https://instagram.com/qucodex",
 		icon: (
 			<svg
 				viewBox="0 0 24 24"
