@@ -10,7 +10,7 @@ const roundOneResults = [
 	{ teamName: "CATALYST CREW", teamLeader: "AKHLAQUE HUSSAIN" },
 	{ teamName: "CODE BUDDY", teamLeader: "PUSHKAR RAJ" },
 	{ teamName: "CODE HUSTLERS", teamLeader: "VANSH SAINI" },
-	{ teamName: "CODE MINDS", teamLeader: "SHIVANSHU SINGH" },
+	{ teamName: "CUREMINDS", teamLeader: "SHIVANSHU SINGH" },
 	{ teamName: "CODE PREDATORS", teamLeader: "ABHIJEET KUMAR" },
 	{ teamName: "CORESIX", teamLeader: "ANANT GUPTA" },
 	{ teamName: "DECODERS 2.0", teamLeader: "SEJAL SINGH" },
