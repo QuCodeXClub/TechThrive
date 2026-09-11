@@ -5,6 +5,8 @@ import DevelopersPage from "@/pages/DevelopersPage";
 import ErrorHandlingPage from "@/pages/ErrorHandlingPage";
 import Home from "@/pages/Home";
 import NotFoundPage from "@/pages/NotFoundPage";
+import ResultsPage from "@/pages/results/ResultsPage";
+import RoundOneResultsPage from "@/pages/results/RoundOneResultsPage";
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +17,23 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Home />,
+			},
+			{
+				path: "results",
+				children: [
+					{
+						index: true,
+						element: <ResultsPage />,
+					},
+					{
+						path: "round-1",
+						element: <RoundOneResultsPage />,
+					},
+					// {
+					// 	path: "grand-finale",
+					// 	element: <GrandFinaleResultsPage />,
+					// },
+				],
 			},
 			{
 				path: "developers",

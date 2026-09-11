@@ -14,7 +14,7 @@ function Hero() {
 	return (
 		<section
 			id="home"
-			className="bg-background relative overflow-hidden py-16 sm:py-20 lg:py-24"
+			className="bg-background relative overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-36 lg:pb-24"
 		>
 			<div className="pointer-events-none absolute inset-0 overflow-hidden">
 				<div className="bg-primary-500/[0.035] absolute top-20 right-[-12rem] size-[32rem] rounded-full blur-[120px]" />
