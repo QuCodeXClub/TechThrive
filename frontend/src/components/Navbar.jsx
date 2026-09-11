@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Menu, Moon, Sparkles, Sun, Trophy, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 
@@ -21,6 +21,7 @@ const REGISTER_URL = "https://unstop.com/p/techthrive-2026-quantum-university-ro
 function Navbar() {
 	const location = useLocation();
 	const isHomePage = location.pathname === "/";
+	const isResultsPage = location.pathname.startsWith("/results");
 
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -586,6 +587,427 @@ function Navbar() {
 						)}
 					</AnimatePresence>
 				</div>
+
+				{!isResultsPage && (
+					<div className="relative mx-auto mt-2 flex max-w-7xl items-stretch justify-center gap-1 overflow-hidden px-1 sm:gap-1">
+						{[
+							{ left: "13%", top: "18%", size: "size-1.5", delay: 0 },
+							{ left: "34%", top: "70%", size: "size-1", delay: 0.8 },
+							{ left: "48%", top: "20%", size: "size-1", delay: 1.5 },
+							{ left: "76%", top: "72%", size: "size-1.5", delay: 2.1 },
+						].map((star, index) => (
+							<motion.div
+								key={`left-star-${index}`}
+								style={{
+									left: star.left,
+									top: star.top,
+								}}
+								animate={
+									shouldReduceMotion
+										? { opacity: 0.35 }
+										: {
+												opacity: [0.15, 0.8, 0.2, 0.6, 0.15],
+												scale: [0.6, 1.2, 0.8, 1.05, 0.6],
+												y: [0, -4, 2, -3, 0],
+												rotate: [0, 45, 90, 135, 180],
+											}
+								}
+								transition={{
+									duration: 3.5 + index * 0.5,
+									delay: star.delay,
+									repeat: Infinity,
+									ease: "easeInOut",
+								}}
+								className={`pointer-events-none absolute z-20 ${star.size} text-amber-200`}
+							>
+								<Sparkles className="size-full fill-current" />
+							</motion.div>
+						))}
+
+						{[
+							{ left: "12%", top: "70%", size: "size-1", delay: 0.4 },
+							{ left: "30%", top: "18%", size: "size-1.5", delay: 1.1 },
+							{ left: "57%", top: "75%", size: "size-1", delay: 1.8 },
+							{ left: "76%", top: "22%", size: "size-1.5", delay: 2.4 },
+							{ left: "91%", top: "64%", size: "size-1", delay: 0.9 },
+						].map((star, index) => (
+							<motion.div
+								key={`right-star-${index}`}
+								style={{
+									left: star.left,
+									top: star.top,
+								}}
+								animate={
+									shouldReduceMotion
+										? { opacity: 0.3 }
+										: {
+												opacity: [0.1, 0.75, 0.2, 0.65, 0.1],
+												scale: [0.7, 1.25, 0.8, 1.1, 0.7],
+												y: [0, 3, -4, 2, 0],
+												rotate: [0, -45, -90, -135, -180],
+											}
+								}
+								transition={{
+									duration: 4 + index * 0.35,
+									delay: star.delay,
+									repeat: Infinity,
+									ease: "easeInOut",
+								}}
+								className={`pointer-events-none absolute z-20 ${star.size} text-amber-200`}
+							>
+								<Sparkles className="size-full fill-current" />
+							</motion.div>
+						))}
+
+						<motion.div
+							initial={
+								shouldReduceMotion
+									? false
+									: {
+											opacity: 0,
+											x: -16,
+										}
+							}
+							animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
+							transition={{
+								duration: 0.45,
+								delay: 0.1,
+								ease: [0.22, 1, 0.36, 1],
+							}}
+							whileHover={shouldReduceMotion ? {} : { y: -2 }}
+							whileTap={shouldReduceMotion ? {} : { scale: 0.99 }}
+							className="relative z-10 min-w-0 flex-1"
+						>
+							<Link
+								to="/results/round-1"
+								className="group bg-primary-500 hover:bg-primary-600 relative flex min-h-[54px] items-center overflow-hidden border border-amber-300/45 px-3 py-2.5 text-white shadow-[0_8px_28px_rgba(245,158,11,0.12)] transition-all duration-300 hover:border-amber-200/80 hover:shadow-[0_12px_34px_rgba(245,158,11,0.22)] sm:px-5"
+								style={{
+									clipPath:
+										"polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%)",
+								}}
+							>
+								{/* Golden animated edge */}
+								<motion.div
+									animate={
+										shouldReduceMotion
+											? {}
+											: {
+													opacity: [0.35, 0.9, 0.35],
+												}
+									}
+									transition={{
+										duration: 2.8,
+										repeat: Infinity,
+										ease: "easeInOut",
+									}}
+									className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent"
+								/>
+
+								{/* Golden bottom edge */}
+								<div className="pointer-events-none absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-300/50 to-transparent" />
+
+								{/* Moving light */}
+								<motion.div
+									animate={
+										shouldReduceMotion
+											? {}
+											: {
+													x: ["-130%", "150%"],
+												}
+									}
+									transition={{
+										duration: 3.2,
+										repeat: Infinity,
+										repeatDelay: 2.5,
+										ease: "easeInOut",
+									}}
+									className="pointer-events-none absolute inset-y-0 left-0 w-1/4 -skew-x-12 bg-gradient-to-r from-transparent via-amber-100/15 to-transparent"
+								/>
+
+								<div className="relative flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3">
+									{/* Icon */}
+									<motion.div
+										whileHover={
+											shouldReduceMotion
+												? {}
+												: {
+														scale: 1.08,
+														rotate: 5,
+													}
+										}
+										className="relative flex size-8 shrink-0 items-center justify-center border border-amber-200/30 bg-white/10"
+										style={{
+											clipPath:
+												"polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px))",
+										}}
+									>
+										<motion.div
+											animate={
+												shouldReduceMotion
+													? {}
+													: {
+															opacity: [0.2, 0.55, 0.2],
+														}
+											}
+											transition={{
+												duration: 2,
+												repeat: Infinity,
+											}}
+											className="absolute inset-0 bg-amber-300/10"
+										/>
+
+										<CheckCircle2 className="relative size-4 text-amber-100" />
+									</motion.div>
+
+									{/* Text */}
+									<div className="flex min-w-0 flex-1 flex-col">
+										<div className="flex items-center gap-2">
+											<span className="font-mono text-[8px] font-bold tracking-[0.16em] text-white/60 uppercase">
+												Round 01
+											</span>
+
+											<span className="h-px w-4 bg-amber-200/30" />
+
+											<div className="flex items-center gap-1.5">
+												<motion.span
+													animate={
+														shouldReduceMotion
+															? {}
+															: {
+																	scale: [1, 1.4, 1],
+																	opacity: [0.4, 1, 0.4],
+																}
+													}
+													transition={{
+														duration: 1.7,
+														repeat: Infinity,
+													}}
+													className="size-1.5 bg-amber-300 shadow-[0_0_8px_rgba(251,191,36,0.7)]"
+												/>
+
+												<span className="hidden font-mono text-[7px] font-bold tracking-wider text-amber-200 uppercase sm:block">
+													Completed
+												</span>
+											</div>
+										</div>
+
+										<span className="truncate text-xs font-bold tracking-tight text-white sm:text-sm">
+											Results Published
+										</span>
+									</div>
+
+									{/* Arrow */}
+									<motion.div
+										animate={
+											shouldReduceMotion
+												? {}
+												: {
+														x: [0, 2, 0],
+														y: [0, -2, 0],
+													}
+										}
+										transition={{
+											duration: 2.2,
+											repeat: Infinity,
+											ease: "easeInOut",
+										}}
+										className="flex size-7 shrink-0 items-center justify-center border border-amber-200/20 bg-white/10 transition-all group-hover:border-amber-200/40 group-hover:bg-amber-200/10"
+										style={{
+											clipPath:
+												"polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px))",
+										}}
+									>
+										<ArrowUpRight className="size-4 text-amber-100" />
+									</motion.div>
+								</div>
+							</Link>
+						</motion.div>
+
+						<motion.div
+							initial={
+								shouldReduceMotion
+									? false
+									: {
+											opacity: 0,
+											x: 16,
+										}
+							}
+							animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
+							transition={{
+								duration: 0.45,
+								delay: 0.16,
+								ease: [0.22, 1, 0.36, 1],
+							}}
+							whileHover={shouldReduceMotion ? {} : { y: -1 }}
+							className="relative z-10 min-w-0 flex-1"
+						>
+							<div
+								className="group bg-primary-500/70 hover:bg-primary-500/80 relative flex min-h-[54px] items-center overflow-hidden border border-amber-300/35 px-3 py-2.5 text-white/80 shadow-[0_8px_28px_rgba(245,158,11,0.08)] backdrop-blur-xl transition-all duration-300 hover:border-amber-200/70 hover:shadow-[0_12px_34px_rgba(245,158,11,0.16)] sm:px-5"
+								style={{
+									clipPath: "polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 50%)",
+								}}
+							>
+								{/* Animated golden edge */}
+								<motion.div
+									animate={
+										shouldReduceMotion
+											? {}
+											: {
+													opacity: [0.25, 0.75, 0.25],
+												}
+									}
+									transition={{
+										duration: 3,
+										repeat: Infinity,
+										ease: "easeInOut",
+									}}
+									className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent"
+								/>
+
+								{/* Golden right edge */}
+								<motion.div
+									animate={
+										shouldReduceMotion
+											? {}
+											: {
+													opacity: [0.3, 0.8, 0.3],
+												}
+									}
+									transition={{
+										duration: 2.5,
+										repeat: Infinity,
+									}}
+									className="pointer-events-none absolute inset-y-0 right-0 w-px bg-amber-300"
+								/>
+
+								{/* Moving shimmer */}
+								<motion.div
+									animate={
+										shouldReduceMotion
+											? {}
+											: {
+													x: ["-130%", "150%"],
+												}
+									}
+									transition={{
+										duration: 4,
+										repeat: Infinity,
+										repeatDelay: 3,
+										ease: "easeInOut",
+									}}
+									className="pointer-events-none absolute inset-y-0 left-0 w-1/4 -skew-x-12 bg-gradient-to-r from-transparent via-amber-100/10 to-transparent"
+								/>
+
+								<div className="relative flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3">
+									{/* Trophy */}
+									<motion.div
+										animate={
+											shouldReduceMotion
+												? {}
+												: {
+														y: [0, -2, 0],
+														rotate: [0, -3, 3, 0],
+													}
+										}
+										transition={{
+											duration: 3,
+											repeat: Infinity,
+											ease: "easeInOut",
+										}}
+										className="relative flex size-8 shrink-0 items-center justify-center border border-amber-200/25 bg-amber-300/10"
+										style={{
+											clipPath:
+												"polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px))",
+										}}
+									>
+										<motion.div
+											animate={
+												shouldReduceMotion
+													? {}
+													: {
+															scale: [0.8, 1.2, 0.8],
+															opacity: [0.1, 0.3, 0.1],
+														}
+											}
+											transition={{
+												duration: 2.4,
+												repeat: Infinity,
+											}}
+											className="absolute inset-0 bg-amber-300 blur-md"
+										/>
+
+										<Trophy className="relative size-4 text-amber-300" />
+									</motion.div>
+
+									{/* Text */}
+									<div className="flex min-w-0 flex-1 flex-col">
+										<div className="flex items-center gap-2">
+											<span className="font-mono text-[8px] font-bold tracking-[0.16em] text-white/50 uppercase">
+												Grand Finale
+											</span>
+
+											<span className="h-px w-4 bg-amber-200/20" />
+
+											<div className="flex items-center gap-1.5">
+												<motion.span
+													animate={
+														shouldReduceMotion
+															? {}
+															: {
+																	scale: [1, 1.4, 1],
+																	opacity: [0.35, 1, 0.35],
+																}
+													}
+													transition={{
+														duration: 1.8,
+														repeat: Infinity,
+													}}
+													className="size-1.5 bg-amber-300 shadow-[0_0_8px_rgba(251,191,36,0.7)]"
+												/>
+
+												<span className="hidden font-mono text-[7px] font-bold tracking-wider text-amber-200/80 uppercase sm:block">
+													Upcoming
+												</span>
+											</div>
+										</div>
+
+										<span className="truncate text-xs font-bold tracking-tight text-white/90 sm:text-sm">
+											Results Coming Soon
+										</span>
+									</div>
+
+									{/* Date */}
+									<div
+										className="hidden shrink-0 items-center gap-1.5 border border-amber-200/20 bg-amber-300/10 px-2.5 py-1.5 sm:flex"
+										style={{
+											clipPath:
+												"polygon(3px 0, 100% 0, 100% calc(100% - 3px), calc(100% - 3px) 100%, 0 100%, 0 3px)",
+										}}
+									>
+										<motion.span
+											animate={
+												shouldReduceMotion
+													? {}
+													: {
+															opacity: [0.4, 1, 0.4],
+														}
+											}
+											transition={{
+												duration: 1.7,
+												repeat: Infinity,
+											}}
+											className="size-1.5 bg-amber-300 shadow-[0_0_7px_rgba(251,191,36,0.7)]"
+										/>
+
+										<span className="font-mono text-[7px] font-bold tracking-wider text-amber-100 uppercase">
+											15 Sep
+										</span>
+									</div>
+								</div>
+							</div>
+						</motion.div>
+					</div>
+				)}
 			</motion.header>
 		</>
 	);
