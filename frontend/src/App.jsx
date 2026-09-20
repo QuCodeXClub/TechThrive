@@ -5,6 +5,7 @@ import DevelopersPage from "@/pages/DevelopersPage";
 import ErrorHandlingPage from "@/pages/ErrorHandlingPage";
 import Home from "@/pages/Home";
 import NotFoundPage from "@/pages/NotFoundPage";
+import GrandFinaleResultsPage from "@/pages/results/GrandFinaleResultsPage";
 import ResultsPage from "@/pages/results/ResultsPage";
 import RoundOneResultsPage from "@/pages/results/RoundOneResultsPage";
 
@@ -29,10 +30,10 @@ const router = createBrowserRouter([
 						path: "round-1",
 						element: <RoundOneResultsPage />,
 					},
-					// {
-					// 	path: "grand-finale",
-					// 	element: <GrandFinaleResultsPage />,
-					// },
+					{
+						path: "grand-finale",
+						element: <GrandFinaleResultsPage />,
+					},
 				],
 			},
 			{

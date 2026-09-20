@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Trophy } from "lucide-react";
+import { ArrowRight, Trophy } from "lucide-react";
+import { Link } from "react-router";
 
 import teamV1_1 from "@/assets/team-v1-1.jpg";
 import teamV1_2 from "@/assets/team-v1-2.jpg";
@@ -67,7 +68,8 @@ function PreviousWinners() {
 
 						<div className="lg:justify-self-end">
 							<p className="text-muted max-w-sm text-sm leading-6">
-								A look back at the teams who took the TechThrive stage before you.
+								A look back at the teams who took the TechThrive stage and turned
+								their ideas into winning moments.
 							</p>
 
 							<div className="mt-5 flex items-center gap-3">
@@ -231,14 +233,22 @@ function PreviousWinners() {
 
 							<div>
 								<p className="text-foreground text-xs font-semibold">
-									The next chapter starts here.
+									The latest chapter is now part of the archive.
 								</p>
 
 								<p className="text-muted mt-0.5 text-[10px]">
-									TechThrive 2026 is waiting for its next winning team.
+									Explore the winners from the recently concluded TechThrive 2.0.
 								</p>
 							</div>
 						</div>
+
+						<Link
+							to="/results/grand-finale"
+							className="bg-primary-500 text-primary-foreground hover:bg-primary-500/90 group inline-flex items-center gap-2 rounded px-4 py-2.5 font-mono text-[8px] font-semibold tracking-[0.14em] uppercase transition-colors"
+						>
+							View 2.0 Winners
+							<ArrowRight className="size-3 transition-transform duration-300 group-hover:translate-x-1" />
+						</Link>
 					</div>
 				</motion.div>
 			</div>

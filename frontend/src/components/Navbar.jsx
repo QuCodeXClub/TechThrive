@@ -841,8 +841,9 @@ function Navbar() {
 							whileHover={shouldReduceMotion ? {} : { y: -1 }}
 							className="relative z-10 min-w-0 flex-1"
 						>
-							<div
-								className="group bg-primary-500/70 hover:bg-primary-500/80 relative flex min-h-[54px] items-center overflow-hidden border border-amber-300/35 px-3 py-2.5 text-white/80 shadow-[0_8px_28px_rgba(245,158,11,0.08)] backdrop-blur-xl transition-all duration-300 hover:border-amber-200/70 hover:shadow-[0_12px_34px_rgba(245,158,11,0.16)] sm:px-5"
+							<Link
+								to="/results/grand-finale"
+								className="group bg-primary-500 hover:bg-primary-600 relative flex min-h-[54px] items-center overflow-hidden border border-amber-300/45 px-3 py-2.5 text-white shadow-[0_8px_28px_rgba(245,158,11,0.12)] backdrop-blur-xl transition-all duration-300 hover:border-amber-200/80 hover:shadow-[0_12px_34px_rgba(245,158,11,0.22)] sm:px-5"
 								style={{
 									clipPath: "polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 50%)",
 								}}
@@ -966,13 +967,13 @@ function Navbar() {
 												/>
 
 												<span className="hidden font-mono text-[7px] font-bold tracking-wider text-amber-200/80 uppercase sm:block">
-													Upcoming
+													Completed
 												</span>
 											</div>
 										</div>
 
 										<span className="truncate text-xs font-bold tracking-tight text-white/90 sm:text-sm">
-											Results Coming Soon
+											Results Published
 										</span>
 									</div>
 
@@ -1004,7 +1005,7 @@ function Navbar() {
 										</span>
 									</div>
 								</div>
-							</div>
+							</Link>
 						</motion.div>
 					</div>
 				)}
